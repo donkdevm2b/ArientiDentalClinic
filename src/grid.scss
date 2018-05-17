@@ -91,12 +91,11 @@ $medium-break-point: 1024px;
 }
 
 [class*="small-"], [class*="medium-"], [class*="large-"] {
-    float: left;
-    background-color: red;
+  float: left;
 }
 
 .grid-x::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }

@@ -3,11 +3,11 @@ $light-grey: #f4f4f4;
 $medium-grey: #aaaaaa;
 $dark-grey: #333333;
 
-$text-color: #666666;
+$text-color: #646769;
 
 // App Colors
 $main-color: #6aca3f;
-$second-color: #186f3e;
+$blue: #2ac5ee;
 
 // borders
 $standard-border: 1px solid $medium-grey;
@@ -35,10 +35,21 @@ $test-borderB: 2px solid blue;
   box-sizing: border-box;
 }
 
+html {
+  color: $text-color;
+}
+
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Lato, Raleway;
+  font-family: Lato, ;
+}
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    color: $blue;
+  }
 }
 
 // development
@@ -47,9 +58,26 @@ body {
   background-color: $light-grey;
 }
 
+// header
+header {
+  -moz-box-shadow: 0 1px $light-grey;
+  -webkit-box-shadow: 0 1px $light-grey;
+  box-shadow: 0 1px $light-grey;
+}
+#logo-container {
+  height: 120px;
+  padding: 10px 0px;
+}
+
 // img
 .img-container {
   > img {
-    max-width: 100%;
+    height: 100%;
   }
+}
+
+// layout
+
+.h-align-center {
+  text-align: center;
 }
