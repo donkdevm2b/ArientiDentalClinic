@@ -6,15 +6,20 @@ $dark-grey: #333333;
 $text-color: #646769;
 
 // App Colors
-$main-color: #6aca3f;
-$blue: #2ac5ee;
+$main-color: #138c3b;
+// $main-color: #2ac5ee;
+// $blue: #2ac5ee;
 
 // borders
 $standard-border: 1px solid $medium-grey;
 $highlight-border: 3px solid $main-color;
 $layout-border: 1px dashed $medium-grey;
 
+// radius
 $standard-border-radius: 8px;
+
+// box-shadow
+$header-box-shadow: 0 3px $light-grey;
 
 // test borders
 $test-borderGr: 1px solid $medium-grey;
@@ -48,25 +53,64 @@ body {
 .clickable {
   cursor: pointer;
   &:hover {
-    color: $blue;
+    color: $main-color;
   }
 }
 
 // development
 * {
-  border: $test-borderGr;
-  background-color: $light-grey;
+  // border: $test-borderGr;
 }
 
 // header
+$header-breakpoint: 920px;
+
 header {
-  -moz-box-shadow: 0 1px $light-grey;
-  -webkit-box-shadow: 0 1px $light-grey;
-  box-shadow: 0 1px $light-grey;
+  animation-direction: normal;
+  -moz-box-shadow: $header-box-shadow;
+  -webkit-box-shadow: $header-box-shadow;
+  box-shadow: $header-box-shadow;
 }
+
 #logo-container {
   height: 120px;
-  padding: 10px 0px;
+  padding: 5px 0px;
+}
+
+.top-bar-right {
+  padding-right: 0.5rem;
+}
+
+#hb-container {
+  cursor: pointer;
+}
+
+#hamburger-button { // definetly not working
+  top: 50%;
+  transform: translateY(2%);
+}
+
+.is-off {
+  display: none;
+}
+
+// screen smaller than breakpoint
+@media only screen and (max-width: $header-breakpoint) {
+  .collapse-small {
+    display: none;
+  }
+
+  .top-bar-right {
+    float: right;
+    padding-right: 0;
+  }  
+}
+
+// screen bigger than breakpoint
+@media only screen and (min-width: $header-breakpoint) {
+  .collapse-big {
+    display: none;
+  }
 }
 
 // img
@@ -77,7 +121,12 @@ header {
 }
 
 // layout
-
 .h-align-center {
   text-align: center;
 }
+
+// material icons
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

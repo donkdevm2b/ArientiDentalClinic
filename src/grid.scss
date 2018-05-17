@@ -94,8 +94,19 @@ $medium-break-point: 1024px;
   float: left;
 }
 
+.grid-x{
+  align-items:center;
+  &.grid-flex {
+    display: flex;
+  }
+}
+
 .grid-x::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.cell {
+  height: inherit;
 }

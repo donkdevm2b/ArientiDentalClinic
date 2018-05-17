@@ -8,6 +8,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
 
+  <!-- material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- favicon -->
   <link rel="icon" href="/asset/icon/favicon.ico">
 
@@ -19,44 +22,53 @@
 <body>
   <!-- ****** header ***** -->
   <header class='sticky'>
-    <div class="top-bar grid-x h-align-center">
-      <div id='logo-container' class="img-container small-6 medium-3">
+    <div class="top-bar grid-x grid-flex h-align-center">
+      <div id='logo-container' class="img-container cell small-8 medium-5 large-5">
         <img src="/asset/img/logo.png" alt="logo">
       </div>
 
-      <!-- menu-list -->
-      <div class="top-bar-right collapse-off small-6 medium-9">
-        <p class="clickable small-2">Chi siamo</p>
-        <p class="clickable small-2">Servizi</p>
-        <p class="clickable small-2">Il Team</p>
-        <p class="clickable small-2">News</p>
-        <p class="clickable small-2">Contatti</p>
-        <!-- <ul class="menu align-right">
-          <li><a href="/laura-e-fabio.html">Chi siamo</a></li>
-          <li><a href="/il-grande-giorno.html">Servizi</a></li>
-          <li><a href="/lista.html">Il Team</a></li>
-          <li><a href="/lista.html">News</a></li>
-          <li><a href="/lista.html">Contatti</a></li>
-        </ul> -->
-      </div>
 
-      <!-- hamburger button -->
-      <div id="hb-container" class="top-bar-right collapse-on is-closed menu-trigger">
-        <i id="hamburger-button" class="hamburger-button fa fa-lg fa-bars" aria-hidden="true"></i>
-      </div>
+      <div class="top-bar-right cell small-4 medium-7 large-7">
 
+        <!-- menu inline list -->
+        <div class='collapse-small'>
+          <p class="clickable small-2">Chi siamo</p>
+          <p class="clickable small-2">Servizi</p>
+          <p class="clickable small-2">Il Team</p>
+          <p class="clickable small-2">News</p>
+          <p class="clickable small-2">Contatti</p>
+          <p class="clickable small-2">Dove siamo</p>
+        </div>
+
+        <!-- hamburger button -->
+        <div id="hb-container" class="collapse-big menu-trigger">
+          <i id="hamburger-button" class="material-icons md-48 v-align-center">menu</i>
+        </div>
+
+      </div>
     </div>
 
-    <!-- menu-section -->
-    <!-- <div id="menu-section" class="grid-x is-off fade-in-2">
-      <div class="small-12 cell align-self-middle">
-        <ul>
-          <li onclick="location.href='/laura-e-fabio.html';" class="menu-trigger"><a>Laura e Fabio</a></li>
-          <li onclick="location.href='/il-grande-giorno.html';" class="menu-trigger"><a>il grande giorno</a></li>
-          <li onclick="location.href='/lista.html';" class="menu-trigger"><a>lista</a></li>
-        </ul>
+    <!-- menu vertical section -->
+    <div id="menu-section" class="grid-x is-off fade-in-2">
+      <div class="clickable small-12">
+        <p>Chi siamo</p>
       </div>
-    </div> -->
+      <div class="clickable small-12">
+        <p>Servizi</p>
+      </div>
+      <div class="clickable small-12">
+        <p>Il Team</p>
+      </div>
+      <div class="clickable small-12">
+        <p>News</p>
+      </div>
+      <div class="clickable small-12">
+        <p>Contatti</p>
+      </div>
+      <div class="clickable small-12">
+        <p>Dove siamo</p>
+      </div>
+    </div>
 
   </header>
 
