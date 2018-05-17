@@ -25,8 +25,31 @@ $test-borderG: 2px solid green;
 
 $test-borderB: 2px solid blue;
 
+// import
+@import "grid";
+
+// initial settings
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Lato, Raleway;
+}
+
 // development
-div {
+* {
   border: $test-borderGr;
   background-color: $light-grey;
+}
+
+// img
+.img-container {
+  > img {
+    max-width: 100%;
+  }
 }

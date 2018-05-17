@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
 
   <!-- favicon -->
-  <link rel="icon" href="./asset/icon/favicon.ico">
+  <link rel="icon" href="/asset/icon/favicon.ico">
 
   <!-- css -->
   <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
@@ -17,8 +17,47 @@
 </head>
 
 <body>
+  <!-- ****** header ***** -->
+  <header class='sticky'>
+    <div class="top-bar grid-x">
+      <div id='logo-container'class="img-container small-6 medium-3 large-12">
+        <img src="/asset/img/logo.png" alt="logo">
+      </div>
+
+      <!-- menu-list -->
+      <div class="top-bar-right collapse-off">
+        <ul class="menu align-right">
+          <li><a href="/laura-e-fabio.html">Chi siamo</a></li>
+          <li><a href="/il-grande-giorno.html">Servizi</a></li>
+          <li><a href="/lista.html">Il Team</a></li>
+          <li><a href="/lista.html">News</a></li>
+          <li><a href="/lista.html">Contatti</a></li>
+        </ul>
+      </div>
+
+      <!-- hamburger button -->
+      <div id="hb-container" class="top-bar-right collapse-on is-closed menu-trigger">
+        <i id="hamburger-button" class="hamburger-button fa fa-lg fa-bars" aria-hidden="true"></i>
+      </div>
+
+    </div>
+
+    <!-- menu-section -->
+    <!-- <div id="menu-section" class="grid-x is-off fade-in-2">
+      <div class="small-12 cell align-self-middle">
+        <ul>
+          <li onclick="location.href='/laura-e-fabio.html';" class="menu-trigger"><a>Laura e Fabio</a></li>
+          <li onclick="location.href='/il-grande-giorno.html';" class="menu-trigger"><a>il grande giorno</a></li>
+          <li onclick="location.href='/lista.html';" class="menu-trigger"><a>lista</a></li>
+        </ul>
+      </div>
+    </div> -->
+
+  </header>
+
   <div id="app">hello1111!</div>
-  <script src="./bundle.js"></script>
+
+  <script src="/bundle.js"></script>
 </body>
 
 </html>
