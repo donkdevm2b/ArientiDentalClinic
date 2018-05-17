@@ -1,0 +1,32 @@
+// General Colors
+$light-grey: #f4f4f4;
+$medium-grey: #aaaaaa;
+$dark-grey: #333333;
+
+$text-color: #666666;
+
+// App Colors
+$main-color: #6aca3f;
+$second-color: #186f3e;
+
+// borders
+$standard-border: 1px solid $medium-grey;
+$highlight-border: 3px solid $main-color;
+$layout-border: 1px dashed $medium-grey;
+
+$standard-border-radius: 8px;
+
+// test borders
+$test-borderGr: 1px solid $medium-grey;
+
+$test-borderR: 2px solid red;
+
+$test-borderG: 2px solid green;
+
+$test-borderB: 2px solid blue;
+
+// development
+div {
+  border: $test-borderGr;
+  background-color: $light-grey;
+}
