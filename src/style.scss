@@ -11,7 +11,7 @@ $main-color: #138c3b;
 // $blue: #2ac5ee;
 
 // borders
-$standard-border: 1px solid $medium-grey;
+$light-border: 1px solid $light-grey;
 $highlight-border: 3px solid $main-color;
 $layout-border: 1px dashed $medium-grey;
 
@@ -33,6 +33,14 @@ $test-borderB: 2px solid blue;
 // import
 @import "grid";
 
+// material icons
+.material-icons { font-size: 36px; }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+// .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
 // initial settings
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
@@ -40,20 +48,18 @@ $test-borderB: 2px solid blue;
   box-sizing: border-box;
 }
 
-html {
-  color: $text-color;
-}
-
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Lato, ;
+  font-family: Lato;
+  color: $text-color;
 }
 
 .clickable {
   cursor: pointer;
   &:hover {
     color: $main-color;
+    font-weight: bold;
   }
 }
 
@@ -66,10 +72,14 @@ body {
 $header-breakpoint: 920px;
 
 header {
+  height: 120px;
+  overflow-y: hidden;
+  letter-spacing: 1px;
   animation-direction: normal;
   -moz-box-shadow: $header-box-shadow;
   -webkit-box-shadow: $header-box-shadow;
   box-shadow: $header-box-shadow;
+  transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 #logo-container {
@@ -85,9 +95,27 @@ header {
   cursor: pointer;
 }
 
-#hamburger-button { // definetly not working
+#hamburger-button { // definetly not working for everyone
   top: 50%;
   transform: translateY(2%);
+    // transition: 0.2s ease-in-out;
+}
+
+#menu-section {
+  padding: 0rem 0.5rem;
+
+  div {
+    padding: 0.5rem 1.5rem;
+    border-bottom: $light-border;
+    
+    &:last-child {
+      border-bottom: none; 
+    }
+
+    p {
+      padding-left: 0.625rem;
+    }
+  }
 }
 
 .is-off {
@@ -103,7 +131,7 @@ header {
   .top-bar-right {
     float: right;
     padding-right: 0;
-  }  
+  }
 }
 
 // screen bigger than breakpoint
@@ -125,8 +153,3 @@ header {
   text-align: center;
 }
 
-// material icons
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
