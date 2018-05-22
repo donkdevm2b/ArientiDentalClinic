@@ -1,0 +1,50 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3vw;
+}
+
+p {
+  text-align: justify;  
+}
+
+h3 {
+  &.light {
+    color: $medium-grey;
+  }
+  &.big {
+    font-size: 2vw;
+  }  
+}
+
+// MEDIUM
+@media only screen and (min-width: $small-break-point) and (max-width: $medium-break-point) {
+  h1 {
+    font-size: 4vw;
+  }
+
+  h3 {
+    &.big {
+      font-size: 3.5vw;
+    }
+  }  
+}
+
+// SMALL
+@media only screen and (max-width: $small-break-point) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  h3 {
+    &.big {
+      font-size: 5vw;
+    }
+  }  
+}
+
+.colored {
+  color: $main-color;
+}

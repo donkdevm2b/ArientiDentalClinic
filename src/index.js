@@ -1,6 +1,6 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
 
-import './style.scss'
+import './style/style.scss'
 
 // catch hamburger-button click
 document.getElementById('hamburger-button').onclick = function () {

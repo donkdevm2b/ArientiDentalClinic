@@ -1,0 +1,39 @@
+// layout
+.h-align-center {
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  margin: 4rem 5vw;
+  overflow-y: auto;
+
+  // &#1 {
+  //   margin-top: $header-height;
+  // }
+}
+
+section:first-of-type {
+  margin-top: $header-height;
+  padding-top: 2rem;
+}
+
+.space-small {
+  margin-bottom: 5vh;
+}
+
+section {
+  &.bg-img {
+    margin-left: 0;
+    margin-right: 0;
+    height: 100vh;
+    min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &#servizi {
+
+  }
+}

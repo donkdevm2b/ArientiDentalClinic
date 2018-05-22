@@ -10,6 +10,12 @@ module.exports = {
   //   'jQuery',
   //   'foundation-sites'
   // ],
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, './src/style')
+    ],  
+  },
   module: {
     rules: [
       // {
@@ -56,7 +62,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'src'),
+    path: path.resolve(__dirname, 'public'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -65,7 +71,7 @@ module.exports = {
     // new BundleAnalyzerPlugin()
   ],
   devServer: {
-    contentBase: './src',
+    contentBase: './public',
     // contentBase: path.join(__dirname, 'src'),
     watchContentBase: true,
     hot: true,

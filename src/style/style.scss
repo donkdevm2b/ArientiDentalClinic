@@ -1,72 +1,8 @@
-// General Colors
-$light-grey: #f4f4f4;
-$medium-grey: #aaaaaa;
-$dark-grey: #333333;
-
-$text-color: #646769;
-
-// App Colors
-$main-color: #138c3b;
-// $main-color: #2ac5ee;
-// $blue: #2ac5ee;
-
-// borders
-$light-border: 1px solid $light-grey;
-$highlight-border: 3px solid $main-color;
-$layout-border: 1px dashed $medium-grey;
-
-// radius
-$standard-border-radius: 8px;
-
-// box-shadow
-$header-box-shadow: 0 3px $light-grey;
-
-// test borders
-$test-borderGr: 1px solid $medium-grey;
-
-$test-borderR: 2px solid red;
-
-$test-borderG: 2px solid green;
-
-$test-borderB: 2px solid blue;
-
 // import
 @import "grid";
-
-// material icons
-.material-icons { font-size: 36px; }
-
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-// .material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-// initial settings
-@import url(https://fonts.googleapis.com/css?family=Lato);
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Lato;
-  color: $text-color;
-}
-
-.clickable {
-  cursor: pointer;
-  &:hover {
-    color: $main-color;
-    font-weight: bold;
-  }
-}
-
-// development
-* {
-  // border: $test-borderGr;
-}
+@import "globalSettings";
+@import "text";
+@import "layout";
 
 // header
 $header-breakpoint: 920px;
@@ -80,6 +16,13 @@ header {
   -webkit-box-shadow: $header-box-shadow;
   box-shadow: $header-box-shadow;
   transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-color: white;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 }
 
 #logo-container {
@@ -148,8 +91,4 @@ header {
   }
 }
 
-// layout
-.h-align-center {
-  text-align: center;
-}
 
