@@ -11,10 +11,11 @@ function handleMenuClick () {
   // change hb icon
   document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
   // open | close header height
-  var headerStartHeight = 120
+  var headerStartHeight = 62
   var startHeight = headerStartHeight + 'px'
   var endHeight = headerStartHeight + document.getElementById('menu-section').offsetHeight + 'px'
   var finalPosition = menuIsOpen() ? endHeight : startHeight
+  document.getElementsByTagName('header')[0].classList.toggle('is-closed')
   document.getElementsByTagName('header')[0].style.height = finalPosition   
 }
 

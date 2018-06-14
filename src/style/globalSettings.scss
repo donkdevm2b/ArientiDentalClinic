@@ -19,7 +19,12 @@ $layout-border: 1px dashed $medium-grey;
 $standard-border-radius: 8px;
 
 // box-shadow
-$header-box-shadow: 0 3px $light-grey;
+
+$upper-box-shadow: inset 0 2px 2px $light-grey;
+$lower-box-shadow: inset 0 -2px 2px $light-grey;
+$menu-box-shadow: $upper-box-shadow, $lower-box-shadow;
+
+$topbar-side-padding: 20px;
 
 // test borders
 $test-borderGr: 1px solid $medium-grey;
@@ -30,11 +35,10 @@ $test-borderG: 2px solid green;
 
 $test-borderB: 2px solid blue;
 
-$header-height: 120px;
+$header-height: 62px;
 
 // font
-@import url(https://fonts.googleapis.com/css?family=Lato);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 
 // material icons
 .material-icons { font-size: 36px; }
@@ -46,12 +50,14 @@ $header-height: 120px;
 
 * {
   box-sizing: border-box;
+  animation-direction: normal;
+  transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Montserrat, Lato;
+  font-family: Raleway, Lato;
   color: $text-color;
   font-weight: 400 !important;
 }
