@@ -3,6 +3,7 @@
 
 <head>
   <title>Arienti Dental Clinic</title>
+  <script src="/bundle.js"></script>
   <!-- meta -->
   <!-- <meta name="google-site-verification" content="Gp2QYGnlqtbvhf4QToJbRKyWyjE9pKXVaSzYdSjw6vU" /> -->
   <meta charset="utf-8">
@@ -16,7 +17,7 @@
 
 </head>
 
-<body>
+<body class='is-off'>
   <!-- ****** header ***** -->
   <header class='sticky is-closed'>
     <div class="top-bar grid-x grid-flex">
@@ -197,7 +198,51 @@ Video
     </div>
   </section>
 
-  <script src="/bundle.js"></script>
-</body>
+  <!-- ****** services ***** -->
+  <section id="map-section">
+    <div class="small-12 medium-12 large-6">
+      <div id="map_wrapper">
+        <div id="map" class="mapping"></div>
+      </div>
+    </div>
+    <div class="small-12 medium-12 large-6">
 
+    </div>
+  </section>
+    <script>
+      function initMap() {
+
+        var map;
+        var bounds = new google.maps.LatLngBounds();
+        var mapOptions = {
+          mapTypeId: 'roadmap',
+          zoom: 14,
+          center: {lat: 45.6604,lng: 8.79979}
+        };
+
+        // Display a map on the page
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        // map.setTilt(45);
+
+        // Multiple Markers
+        var markers = [
+          ['Arienti Dental Clinic', 45.6604, 8.79979],
+        ];
+
+        // Loop through our array of markers & place each one on the map  
+        for (i = 0; i < markers.length; i++) {
+          var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+          // bounds.extend(position);
+          marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+          });
+
+        }
+    
+      }
+    </script>  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD32xAGl-WTaXOxLlH84OxjEzHsXxX3Ys0&callback=initMap" type="text/javascript"></script>  
+</body>
 </html>
