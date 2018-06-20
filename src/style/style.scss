@@ -1,8 +1,9 @@
 // import
-@import "grid";
-@import "globalSettings";
-@import "text";
-@import "layout";
+@import "components/grid";
+@import "components/settings";
+@import "components/text";
+@import "components/layout";
+@import "components/counter";
 
 // header
 $header-breakpoint: 920px;
@@ -47,7 +48,7 @@ header {
 
 #logo-container {
   height: 62px;
-  padding: 5px 0px;
+  padding: 7px 0px;
 
   img {
     padding-left: $topbar-side-padding;

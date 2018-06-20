@@ -13,7 +13,8 @@ module.exports = {
   resolve: {
     modules: [
       'node_modules',
-      path.resolve(__dirname, './src/style')
+      path.resolve(__dirname, './src/style'),
+      path.resolve(__dirname, './src/style/components')
     ],  
   },
   module: {

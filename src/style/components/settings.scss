@@ -4,6 +4,7 @@ $medium-grey: #a3b1b4;
 $dark-grey: #333333;
 
 $text-color: #6c747d;
+$dark-text-color: #191b1d;
 
 // App Colors
 $main-color: #a9d7de;
@@ -36,7 +37,7 @@ $test-borderB: 2px solid blue;
 $header-height: 62px;
 
 // font
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Raleway:400,500,700');
 
 // material icons
 .material-icons { font-size: 36px; }
@@ -55,7 +56,7 @@ $header-height: 62px;
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Raleway, Lato;
+  font-family: Raleway, Montserrat;
   color: $text-color;
   font-weight: 400 !important;
 }
