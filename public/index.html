@@ -229,6 +229,13 @@ Video
           ['Arienti Dental Clinic', 45.6604, 8.79979],
         ];
 
+        var icon = {
+          url: './asset/icon/icon.png', // url
+          scaledSize: new google.maps.Size(35, 35) // scaled size
+          // origin: new google.maps.Point(0, 0), // origin
+          // anchor: new google.maps.Point(0, 0) // anchor
+        }
+
         // Loop through our array of markers & place each one on the map  
         for (i = 0; i < markers.length; i++) {
           var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
@@ -236,8 +243,9 @@ Video
           marker = new google.maps.Marker({
             position: position,
             map: map,
-            title: markers[i][0]
-          });
+            title: markers[i][0],
+            icon
+          })
 
         }
     
