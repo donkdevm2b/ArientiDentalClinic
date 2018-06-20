@@ -32,6 +32,59 @@ function menuIsOpen() {
   return document.getElementById('hamburger-button').innerHTML === 'close'
 }
 
+// counter
+var counterAnimationExecuted = [false, false, false, false]
+var values = [20, 1630, 16, 8]
+
+function counterAnimationWasExecuted () {
+  var res = true
+  counterAnimationExecuted.forEach(function(element) {
+    if (element === false) res = false
+  }, this);
+  return res
+}
+
+var counterNumbersEl = document.querySelectorAll('.counterNumber');
+
+function fireCounterAnimation (element, index) {
+  element.style.visibility = 'visible'
+  counterAnimationExecuted[index] = true
+  var finalValue = values[index]
+  console.log('start: ', finalValue)
+
+  var interval = Math.round(1500 / finalValue)
+
+  for (var i = 0; i <= finalValue; i++) {doAnimation(i)}
+  
+  function doAnimation (i) {
+    console.log(element, i)
+    setTimeout(function () { element.innerHTML = i; }, i * interval)
+  }
+}
+
+window.addEventListener('scroll', function (e) {
+  //do stuff
+  if (!counterAnimationWasExecuted()) {
+    counterNumbersEl.forEach(function (element, index) {
+      console.log(index)
+      if (isInViewport(element) && !counterAnimationExecuted[index]) {
+        fireCounterAnimation(element, index)
+      }
+    }, this);
+  }
+  console.log(counterAnimationExecuted)
+})
+
+var isInViewport = function (elem) {
+  var bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
 // function menuTrigger () {
 //   $('#menu-section').toggleClass('is-on is-off')
 //   $('#hamburger-button').toggleClass('fa-bars fa-times')
