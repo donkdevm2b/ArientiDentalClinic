@@ -3,18 +3,43 @@ hr {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   text-align: center;
-  width: 20%;
+  width: 15%;
+
+  &.small {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 10%;
+  }
+}
+
+#map_wrapper {
+  height: 600px;
 }
 
 #map {
-  height: 400px;
-  width: 100%;
+  height: 100%;  
+}
+// LARGE
+@media only screen and (max-width: $medium-break-point) {
+  #map_wrapper {
+    height: 400px;  
+  }
 }
 
 #map-section {
   margin-left: 0;
   margin-right: 0;
 }
+
+// google map override
+// .gm-style-iw + div {display: none;}
+// .gm-style-iw {
+//   #content {
+//     padding-left: 15px;
+//   }
+// }
+
+
 // hr {
 // border-bottom-color:
 // rgb(25, 27, 29)

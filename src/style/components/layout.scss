@@ -1,6 +1,6 @@
 // layout
 .h-align-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 section {
@@ -36,4 +36,8 @@ section {
   &#servizi {
 
   }
+}
+
+.sm-pd-top {
+  padding-top: 1.25rem;
 }

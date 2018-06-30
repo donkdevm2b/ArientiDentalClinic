@@ -11,6 +11,9 @@ window.onload = function () {
     handleMenuClick()
   }
 
+  // handle rensponsive elements
+  handleRensponsivness()
+
   function handleMenuClick() {
     // change hb icon
     document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
@@ -84,8 +87,15 @@ window.onload = function () {
       bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
+}
 
-
+function handleRensponsivness () {
+  var sbElement = document.getElementsByClassName('side-box')
+  for (var index = 0; index < sbElement.length; index++) {
+    var element = sbElement[index];
+    console.log(element.parentElement.clientHeight)
+    element.style.height = element.parentElement.clientHeight / 2 + 'px'
+  }
 }
 // function menuTrigger () {
 //   $('#menu-section').toggleClass('is-on is-off')
