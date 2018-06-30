@@ -11,6 +11,7 @@
 $header-breakpoint: 920px;
 
 header {
+  z-index: 99999;
   height: 62px;
   overflow-y: hidden;
   letter-spacing: 1px;

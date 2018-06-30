@@ -13,12 +13,13 @@ hr {
 }
 
 #map_wrapper {
-  height: 600px;
+  height: 500px;
 }
 
 #map {
   height: 100%;  
 }
+
 // LARGE
 @media only screen and (max-width: $medium-break-point) {
   #map_wrapper {
@@ -27,12 +28,18 @@ hr {
 }
 
 #map-section {
-  margin-left: 0;
-  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .side-box {
   min-height: 250px;
+}
+
+input {
+  // border-radius: 5px;
+  height: 55px;
+  margin-bottom: 1.5rem;
 }
 
 // google map override
