@@ -227,7 +227,7 @@ Video
         // Multiple Markers
         var markers = [
           ['Arienti Dental Clinic', 45.6604, 8.79979],
-        ];
+        ]
 
         var icon = {
           url: './asset/icon/icon.png', // url
@@ -244,10 +244,24 @@ Video
             position: position,
             map: map,
             title: markers[i][0],
-            icon
+            icon,
+            url: 'https://www.google.com/maps/place/Dott.+Ssa+Chiara+Arienti+-+Studio+Dentistico/@45.6604,8.7976013,17z/data=!3m1!4b1!4m5!3m4!1s0x478689c1dbe8607b:0x2cb14ed937238c53!8m2!3d45.6604!4d8.79979?hl=it'
           })
-
         }
+
+        // info window
+        var contentString = '<div id="content">Arienti Dental Clinic</div>'
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        })
+
+        infowindow.open(map, marker)
+        
+        // open google map at click
+        google.maps.event.addListener(marker, 'click', function () {
+          window.open(this.url, '_blank').focus();
+        })
     
       }
     </script>  
