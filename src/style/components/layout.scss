@@ -3,14 +3,26 @@
   text-align: center !important;
 }
 
+.v-align-center {
+  // display:flex;
+  // align-items:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 section {
   background-color: white;
   margin: 4rem 5vw;
   overflow-y: auto;
 
+  &#map-section {
+    overflow-y: visible;
+  }
   // &#1 {
   //   margin-top: $header-height;
   // }
+
 }
 
 section:first-of-type {

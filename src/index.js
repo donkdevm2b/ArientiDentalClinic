@@ -32,6 +32,8 @@ window.onload = function () {
     if (menuIsOpen()) {
       handleMenuClick()
     }
+
+    handleRensponsivness()
   })
 
   // check if menu is open
@@ -94,7 +96,8 @@ function handleRensponsivness () {
   for (var index = 0; index < sbElement.length; index++) {
     var element = sbElement[index];
     console.log(element.parentElement.clientHeight)
-    element.style.height = element.parentElement.clientHeight / 2 + 'px'
+    element.style.height = document.getElementById('map_wrapper').clientHeight / 2 + 'px'
+    // element.style.height = element.parentElement.clientHeight / 2 + 'px'
   }
 }
 // function menuTrigger () {
