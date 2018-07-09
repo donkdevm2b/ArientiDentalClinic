@@ -30,12 +30,12 @@
 
         <!-- menu inline list -->
         <div class='collapse-small'>
-          <p class="clickable my-small-2">CHI SIAMO</p>
-          <p class="clickable my-small-2">SERVIZI</p>
-          <p class="clickable my-small-2">LO STAFF</p>
-          <p class="clickable my-small-2">NEWS</p>
-          <p class="clickable my-small-2">CONTATTI</p>
-          <p class="clickable my-small-2">DOVE SIAMO</p>
+          <p id='menu-chi-siamo' class="clickable my-small-2">CHI SIAMO</p>
+          <p id='menu-servizi' class="clickable my-small-2">SERVIZI</p>
+          <p id='menu-staff' class="clickable my-small-2">LO STAFF</p>
+          <p id='menu-news' class="clickable my-small-2">NEWS</p>
+          <p id='menu-dove' class="clickable my-small-2">DOVE SIAMO</p>
+          <p id='menu-contatti' class="clickable my-small-2">CONTATTI</p>
         </div>
 
         <!-- hamburger button -->
@@ -48,23 +48,23 @@
 
     <!-- menu vertical section -->
     <div id="menu-section" class="grid-x"> <!-- was is-off class -->
-      <div class="clickable my-small-12">
+      <div id='menu-chi-siamo' class="clickable my-small-12">
         <p>CHI SIAMO</p>
       </div>
-      <div class="clickable my-small-12">
+      <div id='menu-servizi' class="clickable my-small-12">
         <p>SERVIZI</p>
       </div>
-      <div class="clickable my-small-12">
+      <div id='menu-staff' class="clickable my-small-12">
         <p>LO STAFF</p>
       </div>
-      <div class="clickable my-small-12">
+      <div id='menu-news' class="clickable my-small-12">
         <p>NEWS</p>
       </div>
-      <div class="clickable my-small-12">
-        <p>CONTATTI</p>
-      </div>
-      <div class="clickable my-small-12">
+      <div id='menu-dove' class="clickable my-small-12">
         <p>DOVE SIAMO</p>
+      </div>
+      <div id='menu-contatti' class="clickable my-small-12">
+        <p>CONTATTI</p>
       </div>
     </div>
 
@@ -237,9 +237,9 @@ Video
         CONTATTI
       </h4>
       <p>
-          Tel: +39 393 88 68 911<br>
-          Email: segreteria@arientidentalclinic.it<br>
-          Web: www.arientidentalclinic.it
+        Tel: +39 393 88 68 911<br>
+        Email: segreteria@arientidentalclinic.it<br>
+        Web: www.arientidentalclinic.it
       </p>
     </div>
   </div>
@@ -334,7 +334,8 @@ Video
         map.setMapTypeId('tehgrayz');        
     
       }
-    </script>  
+    </script>
+  <!-- <script src="/js/jquery-3.3.1.min.js"></script>     -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD32xAGl-WTaXOxLlH84OxjEzHsXxX3Ys0&callback=initMap" type="text/javascript"></script>  
 </body>
 </html>

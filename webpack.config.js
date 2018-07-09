@@ -4,12 +4,12 @@ const path = require('path')
 
 module.exports = {
   entry: [
+    'script-loader!jquery/dist/jquery.min.js',
     './src/index.js'
   ],
-  // externals: [
-  //   'jQuery',
-  //   'foundation-sites'
-  // ],
+  externals: {
+    jquery: 'jQuery'
+  },
   resolve: {
     modules: [
       'node_modules',
@@ -68,8 +68,12 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
     // new BundleAnalyzerPlugin()
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
   ],
   devServer: {
     contentBase: './public',

@@ -1,6 +1,8 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
-
+var $ = require('jquery')
 import './style/style.scss'
+
+const headerHeight = 62
 
 window.onload = function () {
   // show body  
@@ -18,12 +20,26 @@ window.onload = function () {
     // change hb icon
     document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
     // open | close header height
-    var headerStartHeight = 62
-    var startHeight = headerStartHeight + 'px'
-    var endHeight = headerStartHeight + document.getElementById('menu-section').offsetHeight + 'px'
+    var startHeight = headerHeight + 'px'
+    var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
     var finalPosition = menuIsOpen() ? endHeight : startHeight
     document.getElementsByTagName('header')[0].classList.toggle('is-closed')
     document.getElementsByTagName('header')[0].style.height = finalPosition
+  }
+
+  // handle navigation
+  // document.getElementById('menu-chi-siamo').click(function (e) { scrollToId("second-section") })
+  // document.getElementById('menu-servizi').click(function (e) { scrollToId("second-section") })
+  // document.getElementById('menu-staff').click(function (e) { scrollToId("second-section") })
+  // document.getElementById('menu-news').click(function (e) { scrollToId("second-section") })
+  // document.getElementById('menu-contatti').click(function (e) { scrollToId("second-section") })
+  // document.getElementById('menu-dove').onclick = function () { console.log('mapnav'); scrollToId("map_wrapper") }
+  $('#menu-dove').click(() => { scrollToId("#map_wrapper")})
+  $('#first-scopri').click(function (e) { scrollToId("#second-section") })  
+
+  function scrollToId(id) { 
+    if (menuIsOpen()) handleMenuClick()
+    $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500) 
   }
 
   // resize event
@@ -95,7 +111,6 @@ function handleRensponsivness () {
   var sbElement = document.getElementsByClassName('side-box')
   for (var index = 0; index < sbElement.length; index++) {
     var element = sbElement[index];
-    console.log(element.parentElement.clientHeight)
     element.style.height = document.getElementById('map_wrapper').clientHeight / 2 + 'px'
     // element.style.height = element.parentElement.clientHeight / 2 + 'px'
   }
