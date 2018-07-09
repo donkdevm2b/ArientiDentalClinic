@@ -28,14 +28,11 @@ window.onload = function () {
   }
 
   // handle navigation
-  // document.getElementById('menu-chi-siamo').click(function (e) { scrollToId("second-section") })
-  // document.getElementById('menu-servizi').click(function (e) { scrollToId("second-section") })
-  // document.getElementById('menu-staff').click(function (e) { scrollToId("second-section") })
-  // document.getElementById('menu-news').click(function (e) { scrollToId("second-section") })
-  // document.getElementById('menu-contatti').click(function (e) { scrollToId("second-section") })
-  // document.getElementById('menu-dove').onclick = function () { console.log('mapnav'); scrollToId("map_wrapper") }
-  $('#menu-dove').click(() => { scrollToId("#map_wrapper")})
-  $('#first-scopri').click(function (e) { scrollToId("#second-section") })  
+  $('.menu-chi-siamo').click(() => { scrollToId("#chi-siamo")})
+  $('.menu-servizi').click(() => { scrollToId("#servizi")})
+  $('.menu-staff').click(() => { scrollToId("#staff")})
+  $('.menu-dove').click(() => { scrollToId("#map_wrapper")})
+  $('.menu-contatti').click(() => { scrollToId("#contatti")})
 
   function scrollToId(id) { 
     if (menuIsOpen()) handleMenuClick()
