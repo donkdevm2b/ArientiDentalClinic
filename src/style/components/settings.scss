@@ -65,10 +65,19 @@ body {
   font-weight: 400 !important;
 }
 
-input {
+input, textarea {
   font-family: Raleway, Montserrat;
   color: $text-color;
-  font-weight: 400 !important;  
+  font-weight: 400 !important;
+  height: 55px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid $my-medium-grey;
+  font-size: 13px;
+}
+
+textarea {
+  height: 130px;
 }
 
 .clickable {
