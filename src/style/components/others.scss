@@ -21,7 +21,7 @@ hr {
 }
 
 // LARGE
-@media only screen and (max-width: $medium-break-point) {
+@media only screen and (max-width: $my-medium-break-point) {
   #map_wrapper {
     height: 400px;  
   }

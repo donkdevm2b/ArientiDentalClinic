@@ -1,10 +1,10 @@
 // palette
 // 1 - $main-color
-// 2 - $medium-gray
+// 2 - $my-medium-gray
 
 // General Colors
 $light-grey: #f4f4f4;
-$medium-grey: #a3b1b4;
+$my-medium-grey: #a3b1b4;
 $dark-grey: #333333;
 
 $text-color: #6c747d;
@@ -16,7 +16,7 @@ $main-color: #a9d7de;
 // borders
 $light-border: 1px solid $light-grey;
 $highlight-border: 3px solid $main-color;
-$layout-border: 1px dashed $medium-grey;
+$layout-border: 1px dashed $my-medium-grey;
 
 // radius
 $standard-border-radius: 8px;
@@ -30,7 +30,7 @@ $menu-box-shadow: $upper-box-shadow, $lower-box-shadow;
 $topbar-side-padding: 20px;
 
 // test borders
-$test-borderGr: 1px solid $medium-grey;
+$test-borderGr: 1px solid $my-medium-grey;
 
 $test-borderR: 2px solid red;
 

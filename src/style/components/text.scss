@@ -19,7 +19,7 @@ p {
 
 h3 {
   &.light {
-    color: $medium-grey;
+    color: $my-medium-grey;
   }
   &.big {
     font-size: 2vw;
@@ -31,7 +31,7 @@ h3 {
 // }
 
 // MEDIUM
-@media only screen and (min-width: $small-break-point) and (max-width: $medium-break-point) {
+@media only screen and (min-width: $my-small-break-point) and (max-width: $my-medium-break-point) {
   h1 {
     font-size: 4vw;
   }
@@ -44,7 +44,7 @@ h3 {
 }
 
 // SMALL
-@media only screen and (max-width: $small-break-point) {
+@media only screen and (max-width: $my-small-break-point) {
   h1 {
     font-size: 6vw;
   }
