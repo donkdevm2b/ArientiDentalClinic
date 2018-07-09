@@ -28,7 +28,7 @@ window.onload = function () {
   }
 
   // handle navigation
-  $('.menu-chi-siamo').click(() => { scrollToId("#chi-siamo")})
+  $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
   $('.menu-servizi').click(() => { scrollToId("#servizi")})
   $('.menu-staff').click(() => { scrollToId("#staff")})
   $('.menu-dove').click(() => { scrollToId("#map_wrapper")})

@@ -89,6 +89,13 @@ textarea {
   }
 }
 
+a {
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+  }  
+}
+
 // development
 * {
   // border: $test-borderGr;

@@ -25,13 +25,28 @@ hr {
 }
 
 .responsive-contacts {
-  padding-top: 6rem;
-  height: 522px;
+  padding-top: 4rem;
+  // height: 522px;
+}
+
+.contacts-container {
+  height: 500px;
 }
 
 .form-container {
   padding-left: 5vw;
   padding-right: 5vw;
+}
+
+
+.footer {
+  background-color: $my-medium-grey;
+  background-color: #f5f5f5;
+  background-color: $main-color;
+  padding: 3rem 5vw;
+  margin-top: 3rem;
+  h5 {color: $text-color}
+  h4,a, hr, p {color: white; text-decoration: none;}
 }
 
 @media only screen and (max-width: $my-medium-break-point) {
@@ -60,9 +75,6 @@ hr {
   }
 }
 
-.footer {
-  background-color: $main-color;
-}
 
 
 

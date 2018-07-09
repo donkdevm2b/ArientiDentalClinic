@@ -19,11 +19,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(js|jsx)$/,
-      //   exclude: /node_modules/,
-      //   use: ['babel-loader']
-      // },
       {
         test: /\.css$/,
         use: [
@@ -37,29 +32,8 @@ module.exports = {
           'style-loader',
           'css-loader',
           'sass-loader'
-          // {
-          //   loader: 'sass-loader',
-          //   query: {
-          //     includePaths: [
-          //       path.resolve(__dirname, './node_modules/foundation-sites/scss')
-          //     ]
-          //   }
-          // }
         ]
       }
-      // {
-      //   test: /\.(png|gif|jpg)$/,
-      //   include: [
-      //     path.join(__dirname, './src/assets/img')
-      //   ],
-      //   use: 'file-loader'
-      // },
-      // {
-      //   test: /\.(woff|woff2|eot|ttf|otf)$/,
-      //   use: [
-      //     'file-loader'
-      //   ]
-      // }
     ]
   },
   output: {
@@ -69,18 +43,18 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    // new BundleAnalyzerPlugin()
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
     })
+    // new BundleAnalyzerPlugin()
   ],
   devServer: {
     contentBase: './public',
-    // contentBase: path.join(__dirname, 'src'),
     watchContentBase: true,
     hot: true,
     port: 3000
+    // contentBase: path.join(__dirname, 'src'),
     // host: '172.31.99.66'
   }
 }
