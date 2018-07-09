@@ -46,6 +46,24 @@ hr {
   }
 }
 
+@media only screen and (min-width: $my-medium-break-point) {
+  #map_wrapper {
+    border-top: $light-border;
+    border-bottom: $light-border;
+  }
+
+  #side-box1 {
+    border-top: $light-border;
+  }
+  #side-box2 {
+    border-bottom: $light-border;
+  }
+}
+
+.footer {
+  background-color: $main-color;
+}
+
 
 
 // :nth-of-type(1){...}
