@@ -171,24 +171,28 @@ function handleMoveCarousel (e) {
   console.log('stepsize', stepSize)
   var cardsNumber = $("#carousel > *").length
   console.log('cardsNumber', cardsNumber)
-  var maxDistance = cardsNumber * stepSize
+  var maxDistance = cardsNumber * stepSize - $(window).width()
   console.log('maxDistance', maxDistance)
-  var stepInstance = event.target.id === 'left-button' ? -stepSize : stepSize
+  var stepInstance = event.target.id === 'left-button' ? -1 : 1
 
-  var nextDestination = carouselPosition + stepInstance
-  // var nextStatePosition
-  if (nextDestination > 0 && nextDestination < maxDistance) {
-    carouselPosition = nextDestination
-    // nextStatePosition = carouselPosition + stepInstance
-  } else if (nextDestination <= 0) {
+  var nextPosition = carouselPosition + stepInstance
+  var nextDistance = nextPosition * stepSize
+  console.log('nextDistance', nextDistance)
+  if (nextDistance > 0 && nextDistance <= maxDistance) {
+    carouselPosition = nextPosition
+  } else if (nextDistance <= 0) {
     carouselPosition = 0
   }
 
+  var translationSize = carouselPosition * stepSize
+
   $('#carousel').css({
-    '-webkit-transform': `translate(-${carouselPosition}px)`,
-    '-ms-transform': `translate(-${carouselPosition}px)`,
-    'transform': `translate(-${carouselPosition}px)`
+    '-webkit-transform': `translate(-${translationSize}px)`,
+    '-ms-transform': `translate(-${translationSize}px)`,
+    'transform': `translate(-${translationSize}px)`
   })
+
+  // handle arrows
 }
 
 function handleCarouselColor () {

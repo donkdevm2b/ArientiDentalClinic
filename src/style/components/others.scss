@@ -50,10 +50,13 @@ hr {
 }
 
 .carousel-wrapper {
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  width: 100vw;
+  padding-top: 155px;
 }
 
 .carousel {
+  overflow: visible;
   display: flex;
   animation-direction: normal;
   transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
@@ -63,6 +66,12 @@ hr {
     flex-shrink: 0;
     height: 5rem;
     text-align: center;
+
+    h3 {
+      font-size: 16px;
+      letter-spacing: 6px;
+      font-weight: 500;
+    }
   }
 }
 
