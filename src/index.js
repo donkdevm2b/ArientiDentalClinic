@@ -12,6 +12,7 @@ var counterAnimationExecuted = [false, false, false, false]
 const values = [20, 1630, 16, 8]
 // carousel
 var carouselPosition = 0
+var stepSize, cardsNumber, maxDistance
 
 const menuList = ['chi-siamo', 'servizi', 'staff', 'dove',  'contatti']
 
@@ -29,6 +30,7 @@ window.onload = function () {
   handleRensponsivness()
   handleMenuHighlight()
   handleCarouselColor()
+  setCarouselMeasures()
 
   // carousel
   $('.carousel-button').click((e) => { handleMoveCarousel(e) })
@@ -46,7 +48,7 @@ window.onload = function () {
     if (menuIsOpen()) {
       handleMenuClick()
     }
-
+    setCarouselMeasures()
     handleRensponsivness()
   })
 
@@ -162,17 +164,21 @@ function fireCounterAnimation(element, index) {
   }
 }
 
+function setCarouselMeasures () {
+  // var stepSize = this.state.viewportWidth * (0.8)
+  stepSize = $('#carousel').children(":first").width()
+  console.log('stepsize', stepSize)
+  cardsNumber = $("#carousel > *").length
+  console.log('cardsNumber', cardsNumber)
+  maxDistance = cardsNumber * stepSize - $(window).width() + 100
+  console.log('maxDistance', maxDistance)
+}
+
 // carousel
 function handleMoveCarousel (e) {
-  console.log('handleMoveCarousel', e)
+  console.log('carouselPosition', carouselPosition)
   event.preventDefault()
-  // var stepSize = this.state.viewportWidth * (0.8)
-  var stepSize = $('#carousel').children(":first").width()
-  console.log('stepsize', stepSize)
-  var cardsNumber = $("#carousel > *").length
-  console.log('cardsNumber', cardsNumber)
-  var maxDistance = cardsNumber * stepSize - $(window).width()
-  console.log('maxDistance', maxDistance)
+
   var stepInstance = event.target.id === 'left-button' ? -1 : 1
 
   var nextPosition = carouselPosition + stepInstance
@@ -180,9 +186,15 @@ function handleMoveCarousel (e) {
   console.log('nextDistance', nextDistance)
   if (nextDistance > 0 && nextDistance <= maxDistance) {
     carouselPosition = nextPosition
+    $('#left-button,#right-button').css('visibility', 'visible')
+    if (maxDistance - nextDistance < stepSize / 2) $('#right-button').css('visibility', 'hidden')
   } else if (nextDistance <= 0) {
     carouselPosition = 0
-  }
+    $('#left-button').css('visibility', 'hidden')
+  } 
+  // else {
+  //   $('#right-button').css('visibility', 'hidden')
+  // }
 
   var translationSize = carouselPosition * stepSize
 
@@ -193,6 +205,9 @@ function handleMoveCarousel (e) {
   })
 
   // handle arrows
+  // if (carouselPosition === 0) {
+  //   $('#left-button').css('visibility', 'hidden')
+  // }
 }
 
 function handleCarouselColor () {
