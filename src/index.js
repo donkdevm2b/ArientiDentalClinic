@@ -1,5 +1,6 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
 var $ = require('jquery')
+var _ = require('underscore')
 import './style/style.scss'
 
 // *********************
@@ -29,8 +30,8 @@ window.onload = function () {
   // handle rensponsive elements
   handleRensponsivness()
   handleMenuHighlight()
-  handleCarouselColor()
   setCarouselMeasures()
+  handleCarouselColor()
 
   // carousel
   $('.carousel-button').click((e) => { handleMoveCarousel(e) })
@@ -43,18 +44,28 @@ window.onload = function () {
   $('.menu-contatti').click(() => { scrollToId("#contatti")})
 
   // resize event
-  window.addEventListener('resize', function () {
+  // window.addEventListener('resize', function () {
+  //   // close menu section if it's open
+  //   if (menuIsOpen()) {
+  //     handleMenuClick()
+  //   }
+  //   setCarouselMeasures()
+  //   handleMoveCarousel('resize')
+  //   handleRensponsivness()
+  // })
+  window.addEventListener('resize', _.debounce(function () {
     // close menu section if it's open
     if (menuIsOpen()) {
       handleMenuClick()
     }
     setCarouselMeasures()
+    handleMoveCarousel('resize')
     handleRensponsivness()
-  })
+  }, 200))
 
   // counter
   var counterNumbersEl = document.querySelectorAll('.counterNumber');
-  window.addEventListener('scroll', function (e) {
+  window.addEventListener('scroll', _.debounce(function () {
     //handle counters
     if (!counterAnimationWasExecuted()) {
       counterNumbersEl.forEach(function (element, index) {
@@ -65,7 +76,7 @@ window.onload = function () {
     }
 
     handleMenuHighlight()
-  })
+  }, 200))
 }
 
 // *********************
@@ -127,12 +138,8 @@ function isInViewport (elem) {
       console.log('btm comparison: ', (window.innerHeight || document.documentElement.clientHeight))
     }
 
+    if (bounding.top >= 0 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)) return true
     if (bounding.top < 0 && bounding.bottom > 200) return true
-
-    return (
-      bounding.top >= 0 &&
-      bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
-    )
   }
 }
 
@@ -182,21 +189,25 @@ function setCarouselMeasures () {
 // carousel
 function handleMoveCarousel (e) {
   console.log('carouselPosition', carouselPosition)
+
   event.preventDefault()
 
-  var stepInstance = event.target.id === 'left-button' ? -1 : 1
 
-  var nextPosition = carouselPosition + stepInstance
-  var nextDistance = nextPosition * stepSize
-  console.log('nextDistance', nextDistance)
-  if (nextDistance > 0 && nextDistance <= maxDistance) {
-    carouselPosition = nextPosition
-    $('#left-button,#right-button').css('visibility', 'visible')
-    if (maxDistance - nextDistance < stepSize / 2) $('#right-button').css('visibility', 'hidden')
-  } else if (nextDistance <= 0) {
-    carouselPosition = 0
-    $('#left-button').css('visibility', 'hidden')
-  } 
+  if (e !== 'resize') {
+    var stepInstance = event.target.id === 'left-button' ? -1 : 1
+
+    var nextPosition = carouselPosition + stepInstance
+    var nextDistance = nextPosition * stepSize    
+    console.log('nextDistance', nextDistance)
+    if (nextDistance > 0 && nextDistance <= maxDistance) {
+      carouselPosition = nextPosition
+      $('#left-button,#right-button').css('visibility', 'visible')
+      if (maxDistance - nextDistance < stepSize / 2) $('#right-button').css('visibility', 'hidden')
+    } else if (nextDistance <= 0) {
+      carouselPosition = 0
+      $('#left-button').css('visibility', 'hidden')
+    } 
+  }
 
   var translationSize = carouselPosition * stepSize
 
@@ -209,4 +220,13 @@ function handleMoveCarousel (e) {
 
 function handleCarouselColor () {
   var colors = ['#a9d7de', '#a3b1b4', '#c4deb7', '#89bd97']
+
+  const cards = document.querySelectorAll("#carousel > *")
+
+  console.log(cards)
+  var colorIndex = 0
+  for (var i = 0; i < cardsNumber; i++) {
+    $(cards[i]).css('background-color', colors[colorIndex])
+    colorIndex < colors.length - 1 ? colorIndex++ : colorIndex = 0
+  }
 }
