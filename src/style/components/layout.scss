@@ -27,11 +27,10 @@ section {
     background-position: center center;
   }
 
-  // &.carousel-section {
-  //   width: 100vw;
-  //   padding: 155px 0px;
-  //   overflow-y: visible;
-  // }
+  &#carousel-section {
+    padding: 155px 0px;
+    overflow-y: visible;
+  }
 }
 
 section:first-of-type {

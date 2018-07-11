@@ -192,9 +192,6 @@ function handleMoveCarousel (e) {
     carouselPosition = 0
     $('#left-button').css('visibility', 'hidden')
   } 
-  // else {
-  //   $('#right-button').css('visibility', 'hidden')
-  // }
 
   var translationSize = carouselPosition * stepSize
 
@@ -203,11 +200,6 @@ function handleMoveCarousel (e) {
     '-ms-transform': `translate(-${translationSize}px)`,
     'transform': `translate(-${translationSize}px)`
   })
-
-  // handle arrows
-  // if (carouselPosition === 0) {
-  //   $('#left-button').css('visibility', 'hidden')
-  // }
 }
 
 function handleCarouselColor () {
