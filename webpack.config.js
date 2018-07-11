@@ -53,7 +53,7 @@ module.exports = {
     contentBase: './public',
     watchContentBase: true,
     hot: true,
-    port: 3000
+    port: 8082
     // contentBase: path.join(__dirname, 'src'),
     // host: '172.31.99.66'
   }

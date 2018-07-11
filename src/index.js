@@ -28,6 +28,7 @@ window.onload = function () {
   // handle rensponsive elements
   handleRensponsivness()
   handleMenuHighlight()
+  handleCarouselColor()
 
   // carousel
   $('.carousel-button').click((e) => { handleMoveCarousel(e) })
@@ -117,13 +118,13 @@ function scrollToId(id) {
 function isInViewport (elem) {
   if (elem) {
     var bounding = elem.getBoundingClientRect();
-    console.log(elem, bounding)
-    console.log('bottom: ')
+    console.log('isInViewPort? ', elem)
+    console.log('top: ', bounding.top)
+    console.log('bottom: ', bounding.bottom)
+    console.log('btm comparison: ', (window.innerHeight || document.documentElement.clientHeight))
     return (
       bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
     )
   }
 }
@@ -188,4 +189,8 @@ function handleMoveCarousel (e) {
     '-ms-transform': `translate(-${carouselPosition}px)`,
     'transform': `translate(-${carouselPosition}px)`
   })
+}
+
+function handleCarouselColor () {
+  var colors = ['#a9d7de', '#a3b1b4', '#c4deb7', '#89bd97']
 }

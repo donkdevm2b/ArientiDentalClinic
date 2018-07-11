@@ -15,18 +15,7 @@ section {
   background-color: white;
   padding: 2rem 5vw;
   overflow-y: auto;
-}
 
-section:first-of-type {
-  margin-top: $header-height;
-  padding-top: 2rem;
-}
-
-.space-small {
-  margin-bottom: 5vh;
-}
-
-section {
   &.bg-img {
     margin-left: 0;
     margin-right: 0;
@@ -37,6 +26,21 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  // &.carousel-section {
+  //   width: 100vw;
+  //   padding: 155px 0px;
+  //   overflow-y: visible;
+  // }
+}
+
+section:first-of-type {
+  margin-top: $header-height;
+  padding-top: 2rem;
+}
+
+.space-small {
+  margin-bottom: 5vh;
 }
 
 .sm-pd-top {
