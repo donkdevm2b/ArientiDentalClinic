@@ -120,10 +120,15 @@ function scrollToId(id) {
 function isInViewport (elem) {
   if (elem) {
     var bounding = elem.getBoundingClientRect();
-    console.log('isInViewPort? ', elem)
-    console.log('top: ', bounding.top)
-    console.log('bottom: ', bounding.bottom)
-    console.log('btm comparison: ', (window.innerHeight || document.documentElement.clientHeight))
+    if ($(elem).attr('id') === 'servizi') {
+      console.log('isInViewPort? ', elem)
+      console.log('top: ', bounding.top)
+      console.log('bottom: ', bounding.bottom)
+      console.log('btm comparison: ', (window.innerHeight || document.documentElement.clientHeight))
+    }
+
+    if (bounding.top < 0 && bounding.bottom > 200) return true
+
     return (
       bounding.top >= 0 &&
       bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
