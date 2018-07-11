@@ -13,6 +13,8 @@ const values = [20, 1630, 16, 8]
 // carousel
 var carouselPosition = 0
 
+const menuList = ['chi-siamo', 'servizi', 'staff', 'dove',  'contatti']
+
 
 window.onload = function () {
   // show body  
@@ -25,6 +27,7 @@ window.onload = function () {
 
   // handle rensponsive elements
   handleRensponsivness()
+  handleMenuHighlight()
 
   // carousel
   $('.carousel-button').click((e) => { handleMoveCarousel(e) })
@@ -33,7 +36,7 @@ window.onload = function () {
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
   $('.menu-servizi').click(() => { scrollToId("#servizi")})
   $('.menu-staff').click(() => { scrollToId("#staff")})
-  $('.menu-dove').click(() => { scrollToId("#map_wrapper")})
+  $('.menu-dove').click(() => { scrollToId("#dove")})
   $('.menu-contatti').click(() => { scrollToId("#contatti")})
 
   // resize event
@@ -57,6 +60,8 @@ window.onload = function () {
         }
       }, this)
     }
+
+    handleMenuHighlight()
   })
 }
 
@@ -65,6 +70,29 @@ window.onload = function () {
 // *********************
 
 // menu
+function handleMenuHighlight () {
+  // highlight menu onview section
+  menuList.some(function (elName) {
+    var element = document.getElementById(elName)
+    if (isInViewport(element)) {
+      console.log('IN VIEW: ', elName)
+      // add hovered class
+      $('.menu-' + elName).addClass('hovered')
+
+      // remove from others
+      var globalString = ''
+      menuList.forEach(function (str) {
+        if (str !== elName) globalString += '.menu-' + str + ','
+      }, this)
+      // remove last comma
+      globalString = globalString.slice(0, -1);
+      $(globalString).removeClass('hovered')
+      // exit from loop
+      return true
+    }
+  }, this)  
+}
+
 function handleMenuClick() {
   // change hb icon
   document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
@@ -87,13 +115,17 @@ function scrollToId(id) {
 }
 
 function isInViewport (elem) {
-  var bounding = elem.getBoundingClientRect();
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  )
+  if (elem) {
+    var bounding = elem.getBoundingClientRect();
+    console.log(elem, bounding)
+    console.log('bottom: ')
+    return (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+  }
 }
 
 // handle rensponsive elements
@@ -101,7 +133,7 @@ function handleRensponsivness () {
   var sbElement = document.getElementsByClassName('side-box')
   for (var index = 0; index < sbElement.length; index++) {
     var element = sbElement[index];
-    element.style.height = document.getElementById('map_wrapper').clientHeight / 2 + 'px'
+    element.style.height = document.getElementById('dove').clientHeight / 2 + 'px'
     // element.style.height = element.parentElement.clientHeight / 2 + 'px'
   }
 }

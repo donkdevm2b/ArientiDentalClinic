@@ -18,6 +18,7 @@ header {
   animation-direction: normal;
   transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   background-color: white;
+  color: #191b1d;  
 
   &.sticky {
     position: fixed;
@@ -36,7 +37,7 @@ header {
     transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     font-size: 10px;
     letter-spacing: 2px;
-    color: #191b1d;
+    // color: #191b1d;
     &:hover {
       color: $main-color;
       font-weight: bold;

@@ -83,7 +83,7 @@ textarea {
 
 .clickable {
   cursor: pointer;
-  &:hover {
+  &:hover,&.hovered {
     color: $main-color;
     font-weight: bold;
   }
