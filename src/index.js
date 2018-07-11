@@ -10,6 +10,8 @@ const headerHeight = 62
 // counter
 var counterAnimationExecuted = [false, false, false, false]
 const values = [20, 1630, 16, 8]
+// carousel
+var carouselPosition = 0
 
 
 window.onload = function () {
@@ -25,8 +27,7 @@ window.onload = function () {
   handleRensponsivness()
 
   // carousel
-  // $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo") })
-  // $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo") })
+  $('.carousel-button').click((e) => { handleMoveCarousel(e) })
 
   // handle navigation
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
@@ -129,32 +130,30 @@ function fireCounterAnimation(element, index) {
 }
 
 // carousel
-// handleScroll = (event) => {
-//   event.preventDefault()
-//   var stepSize = this.state.viewportWidth * (0.8)
+function handleMoveCarousel (e) {
+  console.log('handleMoveCarousel', e)
+  event.preventDefault()
+  // var stepSize = this.state.viewportWidth * (0.8)
+  var stepSize = $('#carousel').children(":first").width()
+  console.log('stepsize', stepSize)
+  var cardsNumber = $("#carousel > *").length
+  console.log('cardsNumber', cardsNumber)
+  var maxDistance = cardsNumber * stepSize
+  console.log('maxDistance', maxDistance)
+  var stepInstance = event.target.id === 'left-button' ? -stepSize : stepSize
 
-//   var maxDistance = this.props.picto.length * $('.picto-element')[0].offsetWidth + 85
-//   var stepInstance = event.target.id === 'left-button' ? -stepSize : stepSize
+  var nextDestination = carouselPosition + stepInstance
+  // var nextStatePosition
+  if (nextDestination > 0 && nextDestination < maxDistance) {
+    carouselPosition = nextDestination
+    // nextStatePosition = carouselPosition + stepInstance
+  } else if (nextDestination <= 0) {
+    carouselPosition = 0
+  }
 
-//   this.setState(prevState => {
-//     var nextDestination = prevState.position + stepInstance
-//     var nextPosition = prevState.position
-//     // var nextStatePosition
-//     if (nextDestination > 0 && nextDestination < maxDistance) {
-//       nextPosition = nextDestination
-//       // nextStatePosition = prevState.position + stepInstance
-//     } else if (nextDestination <= 0) {
-//       nextPosition = 0
-//     }
-
-//     return { position: nextPosition }
-//   })
-// }
-
-// moveSelector(position) {
-//   $('#picto-selector-content').css({
-//     '-webkit-transform': `translate(-${position}px)`,
-//     '-ms-transform': `translate(-${position}px)`,
-//     'transform': `translate(-${position}px)`
-//   })
-// }
+  $('#carousel').css({
+    '-webkit-transform': `translate(-${carouselPosition}px)`,
+    '-ms-transform': `translate(-${carouselPosition}px)`,
+    'transform': `translate(-${carouselPosition}px)`
+  })
+}
