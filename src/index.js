@@ -2,7 +2,15 @@ console.log('*************\nArientiDentalClinic\n' + new Date + '\n************'
 var $ = require('jquery')
 import './style/style.scss'
 
+// *********************
+// ***** variables *****
+// *********************
+// header
 const headerHeight = 62
+// counter
+var counterAnimationExecuted = [false, false, false, false]
+const values = [20, 1630, 16, 8]
+
 
 window.onload = function () {
   // show body  
@@ -16,16 +24,9 @@ window.onload = function () {
   // handle rensponsive elements
   handleRensponsivness()
 
-  function handleMenuClick() {
-    // change hb icon
-    document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
-    // open | close header height
-    var startHeight = headerHeight + 'px'
-    var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
-    var finalPosition = menuIsOpen() ? endHeight : startHeight
-    document.getElementsByTagName('header')[0].classList.toggle('is-closed')
-    document.getElementsByTagName('header')[0].style.height = finalPosition
-  }
+  // carousel
+  // $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo") })
+  // $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo") })
 
   // handle navigation
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
@@ -33,11 +34,6 @@ window.onload = function () {
   $('.menu-staff').click(() => { scrollToId("#staff")})
   $('.menu-dove').click(() => { scrollToId("#map_wrapper")})
   $('.menu-contatti').click(() => { scrollToId("#contatti")})
-
-  function scrollToId(id) { 
-    if (menuIsOpen()) handleMenuClick()
-    $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500) 
-  }
 
   // resize event
   window.addEventListener('resize', function () {
@@ -49,61 +45,57 @@ window.onload = function () {
     handleRensponsivness()
   })
 
-  // check if menu is open
-  function menuIsOpen() {
-    return document.getElementById('hamburger-button').innerHTML === 'close'
-  }
-
   // counter
-  var counterAnimationExecuted = [false, false, false, false]
-  var values = [20, 1630, 16, 8]
-
-  function counterAnimationWasExecuted() {
-    var res = true
-    counterAnimationExecuted.forEach(function (element) {
-      if (element === false) res = false
-    }, this);
-    return res
-  }
-
   var counterNumbersEl = document.querySelectorAll('.counterNumber');
-
-  function fireCounterAnimation(element, index) {
-    element.style.visibility = 'visible'
-    counterAnimationExecuted[index] = true
-    var finalValue = values[index]
-
-    var interval = Math.round(1500 / finalValue)
-
-    for (var i = 0; i <= finalValue; i++) { doAnimation(i) }
-
-    function doAnimation(i) {
-      setTimeout(function () { element.innerHTML = i; }, i * interval)
-    }
-  }
-
   window.addEventListener('scroll', function (e) {
-    //do stuff
+    //handle counters
     if (!counterAnimationWasExecuted()) {
       counterNumbersEl.forEach(function (element, index) {
         if (isInViewport(element) && !counterAnimationExecuted[index]) {
           fireCounterAnimation(element, index)
         }
-      }, this);
+      }, this)
     }
   })
-
-  var isInViewport = function (elem) {
-    var bounding = elem.getBoundingClientRect();
-    return (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
 }
 
+// *********************
+// ******* methods *****
+// *********************
+
+// menu
+function handleMenuClick() {
+  // change hb icon
+  document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
+  // open | close header height
+  var startHeight = headerHeight + 'px'
+  var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
+  var finalPosition = menuIsOpen() ? endHeight : startHeight
+  document.getElementsByTagName('header')[0].classList.toggle('is-closed')
+  document.getElementsByTagName('header')[0].style.height = finalPosition
+}
+
+// check if menu is open
+function menuIsOpen() {
+  return document.getElementById('hamburger-button').innerHTML === 'close'
+}
+
+function scrollToId(id) {
+  if (menuIsOpen()) handleMenuClick()
+  $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500)
+}
+
+function isInViewport (elem) {
+  var bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+}
+
+// handle rensponsive elements
 function handleRensponsivness () {
   var sbElement = document.getElementsByClassName('side-box')
   for (var index = 0; index < sbElement.length; index++) {
@@ -112,19 +104,57 @@ function handleRensponsivness () {
     // element.style.height = element.parentElement.clientHeight / 2 + 'px'
   }
 }
-// function menuTrigger () {
-//   $('#menu-section').toggleClass('is-on is-off')
-//   $('#hamburger-button').toggleClass('fa-bars fa-times')
 
-//   var nowClass = document.getElementById('hamburger-button').innerHTML
-//   console.log(nowClass)
-//   // document.getElementById('hamburger-button').innerHTML
+// counter
+function counterAnimationWasExecuted() {
+  var res = true
+  counterAnimationExecuted.forEach(function (element) {
+    if (element === false) res = false
+  }, this)
+  return res
+}
+
+function fireCounterAnimation(element, index) {
+  element.style.visibility = 'visible'
+  counterAnimationExecuted[index] = true
+  var finalValue = values[index]
+
+  var interval = Math.round(1500 / finalValue)
+
+  for (var i = 0; i <= finalValue; i++) { doAnimation(i) }
+
+  function doAnimation(i) {
+    setTimeout(function () { element.innerHTML = i; }, i * interval)
+  }
+}
+
+// carousel
+// handleScroll = (event) => {
+//   event.preventDefault()
+//   var stepSize = this.state.viewportWidth * (0.8)
+
+//   var maxDistance = this.props.picto.length * $('.picto-element')[0].offsetWidth + 85
+//   var stepInstance = event.target.id === 'left-button' ? -stepSize : stepSize
+
+//   this.setState(prevState => {
+//     var nextDestination = prevState.position + stepInstance
+//     var nextPosition = prevState.position
+//     // var nextStatePosition
+//     if (nextDestination > 0 && nextDestination < maxDistance) {
+//       nextPosition = nextDestination
+//       // nextStatePosition = prevState.position + stepInstance
+//     } else if (nextDestination <= 0) {
+//       nextPosition = 0
+//     }
+
+//     return { position: nextPosition }
+//   })
 // }
 
-
-// function scrollToId(id) { $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500) }
-
-// // switch menu
-// $('#menuInjection').on('click', '.menu-trigger', function () {
-//   menuTrigger()
-// })
+// moveSelector(position) {
+//   $('#picto-selector-content').css({
+//     '-webkit-transform': `translate(-${position}px)`,
+//     '-ms-transform': `translate(-${position}px)`,
+//     'transform': `translate(-${position}px)`
+//   })
+// }

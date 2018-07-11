@@ -49,6 +49,18 @@ hr {
   h4,a, hr, p {color: white; text-decoration: none;}
 }
 
+.carousel {
+  overflow-x: hidden;
+  display: flex;
+
+  > div {
+flex-grow: 0;     /* do not grow   - initial value: 0 */
+flex-shrink: 0; 
+    height: 5rem;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: $my-medium-break-point) {
   .contacts-container {
     height: 250px;
