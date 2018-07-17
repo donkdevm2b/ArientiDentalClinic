@@ -114,8 +114,10 @@ function handleMenuClick() {
   var startHeight = headerHeight + 'px'
   var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
   var finalPosition = menuIsOpen() ? endHeight : startHeight
-  document.getElementsByTagName('header')[0].classList.toggle('is-closed')
-  document.getElementsByTagName('header')[0].style.height = finalPosition
+  // document.getElementsByTagName('header')[0].classList.toggle('is-closed')
+  // document.getElementsByTagName('header')[0].classList.toggle('is-open')
+  $("header").toggleClass('is-closed, is-open')
+  // document.getElementsByTagName('header')[0].style.height = finalPosition
 }
 
 // check if menu is open
