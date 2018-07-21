@@ -34,7 +34,7 @@ window.onload = function () {
   handleCarouselColor()
 
   // carousel
-  $('.carousel-button').click((e) => { handleMoveCarousel(e) })
+  $('.carousel-button').click(e => { handleMoveCarousel(e) })
 
   // handle navigation
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
@@ -189,13 +189,13 @@ function setCarouselMeasures () {
 }
 
 // carousel
-function handleMoveCarousel (e) {
+function handleMoveCarousel (event) {
   console.log('carouselPosition', carouselPosition)
 
   event.preventDefault()
 
 
-  if (e !== 'resize') {
+  if (event !== 'resize') {
     var stepInstance = event.target.id === 'left-button' ? -1 : 1
 
     var nextPosition = carouselPosition + stepInstance
