@@ -13,8 +13,8 @@ p {
   line-height: 1.42;
   
   &.paragraph {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
     text-align: justify;
   }
 }
@@ -80,4 +80,13 @@ h3 {
   letter-spacing: 1px;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-container {
+  // padding-top: 5rem;
+  // padding-bottom: 3.5rem;
+  padding: 5rem 1rem 3.5rem;
+}
 

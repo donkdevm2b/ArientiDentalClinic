@@ -113,7 +113,18 @@ hr {
   }
 }
 
+.panel-selector {
+  padding: 2.5rem 6vw;
 
+  h4 {
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hovered {
+    border-bottom: $highlight-border;
+  }
+}
 
 
 // :nth-of-type(1){...}
