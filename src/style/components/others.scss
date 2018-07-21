@@ -113,6 +113,10 @@ hr {
   }
 }
 
+.panel {
+  * {transition: all 0.2s ease;}
+}
+
 .panel-selector {
   padding: 2.5rem 6vw;
 

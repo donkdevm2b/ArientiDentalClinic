@@ -43,6 +43,21 @@ window.onload = function () {
   $('.menu-dove').click(() => { scrollToId("#dove")})
   $('.menu-contatti').click(() => { scrollToId("#contatti")})
 
+  // panel
+  $('.button-panel').click(e => {
+    const id = e.target.id.slice(-1)
+    const otherButtonId = '#button-panel' + (id == '1' ? '2' : '1')
+    console.log('button panel was clicked', id)
+    console.log('otherButtonId', otherButtonId)
+    if (!$(e.target).hasClass('hovered')) {
+      console.log('is not hovered')
+      $(e.target).toggleClass('hovered')
+      $(otherButtonId).toggleClass('hovered')
+      $('#panel1, #panel2').toggleClass('zero-opacity')
+      setTimeout(function () { $('#panel1, #panel2').toggleClass('hidden') }, 300)
+    }
+  })
+
   // resize event
   // window.addEventListener('resize', function () {
   //   // close menu section if it's open
