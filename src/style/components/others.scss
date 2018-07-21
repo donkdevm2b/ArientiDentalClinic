@@ -119,15 +119,18 @@ hr {
 
 .panel-selector {
   padding: 2.5rem 6vw;
-
   h4 {
     margin-left: 1rem;
     padding-bottom: 1rem;
+    border-bottom: $light-border;
+    &.hovered {
+      border-bottom: $highlight-border;    
+    }
   }
 
-  .hovered {
-    border-bottom: $highlight-border;
-  }
+  // .hovered {
+  //   border-bottom: $highlight-border;
+  // }
 }
 
 
