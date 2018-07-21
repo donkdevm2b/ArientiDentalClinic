@@ -13,7 +13,8 @@
 
 section {
   background-color: white;
-  padding: 2rem 5vw;
+  // padding: 2rem 0vw;
+  padding-top: 5rem;
   overflow-y: auto;
 
   &.bg-img {
@@ -28,15 +29,18 @@ section {
   }
 
   &#carousel-section {
-    padding: 155px 0px;
+    padding: 50px 0px 70px 0px;
     overflow-y: visible;
+  }
+
+  &#chi-siamo {
+    margin-top: $header-height; 
   }
 }
 
-section:first-of-type {
-  margin-top: $header-height;
-  padding-top: 2rem;
-}
+// section:first-of-type {
+//   margin-top: $header-height; 
+// }
 
 .space-small {
   margin-bottom: 5vh;
@@ -45,3 +49,4 @@ section:first-of-type {
 .sm-pd-top {
   padding-top: 1.25rem;
 }
+

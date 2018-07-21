@@ -13,6 +13,8 @@ p {
   line-height: 1.42;
   
   &.paragraph {
+    padding-left: 5vw;
+    padding-right: 5vw;
     text-align: justify;
   }
 }
@@ -27,7 +29,7 @@ h3 {
 }
 
 // #chi-siamo {
-//   h1, h2
+//   border-bottom: $test-borderR;
 // }
 
 // MEDIUM
@@ -58,6 +60,8 @@ h3 {
 
 .colored {
   color: $main-color;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 // override

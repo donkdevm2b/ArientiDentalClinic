@@ -16,7 +16,7 @@ header {
   overflow-y: hidden;
   letter-spacing: 1px;
   animation-direction: normal;
-  // transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  // transition: 0.5s ease;
   transition: 0.25s ease;
   background-color: white;
   color: #191b1d;  
@@ -39,7 +39,7 @@ header {
 
   p {
     animation-direction: normal;
-    transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: 0.2s ease;
     font-size: 10px;
     letter-spacing: 2px;
     // color: #191b1d;
@@ -52,7 +52,7 @@ header {
 
 .clickable {
   animation-direction: normal;
-  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.2s ease;
 }
 
 #logo-container {
@@ -122,4 +122,9 @@ header {
   }
 }
 
+// borders
+.borders-tb {
+  border-top: $light-border;
+  border-bottom: $light-border;
+}
 
