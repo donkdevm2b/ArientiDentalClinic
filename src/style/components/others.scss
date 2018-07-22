@@ -52,7 +52,7 @@ hr {
 .carousel-wrapper {
   overflow-x: hidden;
   width: 100vw;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
 }
 
 .carousel {
@@ -84,6 +84,45 @@ hr {
         font-size: 20px;
       }
     }    
+  }
+}
+
+.photo-carousel {
+  > div {
+    height: 700px;
+    padding: 0 30px;
+
+    .team-member {
+      border: $light-border;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    img {
+      width:100%;
+      height: auto;
+    }
+
+    .team-member-info {
+      padding-top: 1rem;
+      text-align: center;
+      width: 100%;
+
+      h3 {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 400;        
+        color: $dark-text-color;
+      }
+  
+      p {
+        font-size: 11px;
+        letter-spacing: 2px;
+        font-weight: 500;         
+        color: $text-color;
+      }
+    }
+
   }
 }
 

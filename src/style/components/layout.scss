@@ -29,12 +29,16 @@ section {
   }
 
   &#carousel-section {
-    padding: 50px 0px 70px 0px;
+    padding: 50px 0px /*70px*/ 0px 0px;
     overflow-y: visible;
   }
 
-  &#chi-siamo {
-    // margin-top: $header-height; 
+  &#staff {
+    // margin-top: $header-height;
+
+    padding: 0;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 }
 

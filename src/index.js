@@ -1,7 +1,12 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
 var $ = require('jquery')
 var _ = require('underscore')
+// import 'slick-carousel'
+// import '../node_modules/slick-carousel/slick/slick-theme.scss'
+// import '../node_modules/slick-carousel/slick/slick.js'
 import './style/style.scss'
+// import 'owl.carousel/dist/assets/owl.carousel.scss';
+// import 'owl.carousel';
 
 // *********************
 // ***** variables *****
@@ -35,6 +40,12 @@ window.onload = function () {
 
   // carousel
   $('.carousel-button').click(e => { handleMoveCarousel(e) })
+
+  // photo carousel
+  // $('.photo-carousel').slick({
+  //   infinite: true,
+  // });
+  // $('.photo-carousel').owlCarousel();
 
   // handle navigation
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})

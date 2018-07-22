@@ -2,9 +2,13 @@ const webpack = require('webpack')
 const path = require('path')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel';
+
 module.exports = {
   entry: [
     'script-loader!jquery/dist/jquery.min.js',
+    // 'script-loader!slick-carousel/slick/slick.min.js',
     './src/index.js'
   ],
   externals: {
