@@ -6,7 +6,10 @@ var _ = require('underscore')
 // import '../node_modules/slick-carousel/slick/slick.js'
 import './style/style.scss'
 // import 'owl.carousel/dist/assets/owl.carousel.scss';
-// import 'owl.carousel';
+import 'owl.carousel'
+import 'owl.carousel/dist/owl.carousel.min.js'
+import 'owl.carousel/dist/assets/owl.carousel.min.css'
+import 'owl.carousel/dist/assets/owl.theme.default.min.css'
 
 // *********************
 // ***** variables *****
@@ -45,7 +48,30 @@ window.onload = function () {
   // $('.photo-carousel').slick({
   //   infinite: true,
   // });
-  // $('.photo-carousel').owlCarousel();
+  // $('.owl-carousel').owlCarousel();
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    responsive: {
+      0: {
+        items: 1
+      },
+      640: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      }
+    }
+  });
+  // $('.photo-carousel > div').on('', function (e) {
+  //   console.log('drag', e)
+  // }, false);
+
+  /* events fired on the draggable target */
+  // document.addEventListener("drag", function (e) {
+  //   console.log('drag', e)
+  // }, false);
 
   // handle navigation
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
