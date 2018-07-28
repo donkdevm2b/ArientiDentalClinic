@@ -41,10 +41,6 @@ window.onload = function () {
   // $('.carousel-button').click(e => { handleMoveCarousel(e) })
 
   // photo carousel
-  // $('.photo-carousel').slick({
-  //   infinite: true,
-  // });
-  // $('.owl-carousel').owlCarousel();
   $('.owl-carousel.docs-carousel').owlCarousel({
     loop: true,
     margin: 30,
@@ -74,14 +70,6 @@ window.onload = function () {
       }
     }
   })
-  // $('.photo-carousel > div').on('', function (e) {
-  //   console.log('drag', e)
-  // }, false);
-
-  /* events fired on the draggable target */
-  // document.addEventListener("drag", function (e) {
-  //   console.log('drag', e)
-  // }, false);
 
   // handle navigation
   $('.menu-chi-siamo,#logo-container').click(() => { scrollToId("#chi-siamo")})
