@@ -26,6 +26,11 @@ section {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
+
+    &.service-page {
+      height: 50vh;
+      background-attachment: unset;
+    }
   }
 
   &#carousel-section {
