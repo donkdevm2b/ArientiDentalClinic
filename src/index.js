@@ -1,11 +1,7 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
 var $ = require('jquery')
 var _ = require('underscore')
-// import 'slick-carousel'
-// import '../node_modules/slick-carousel/slick/slick-theme.scss'
-// import '../node_modules/slick-carousel/slick/slick.js'
 import './style/style.scss'
-// import 'owl.carousel/dist/assets/owl.carousel.scss';
 import 'owl.carousel'
 import 'owl.carousel/dist/owl.carousel.min.js'
 import 'owl.carousel/dist/assets/owl.carousel.min.css'
@@ -20,8 +16,8 @@ const headerHeight = 62
 var counterAnimationExecuted = [false, false, false, false]
 const values = [20, 1630, 16, 8]
 // carousel
-var carouselPosition = 0
-var stepSize, cardsNumber, maxDistance
+// var carouselPosition = 0
+// var stepSize, cardsNumber, maxDistance
 
 const menuList = ['chi-siamo', 'servizi', 'staff', 'dove',  'contatti']
 
@@ -38,11 +34,11 @@ window.onload = function () {
   // handle rensponsive elements
   handleRensponsivness()
   handleMenuHighlight()
-  setCarouselMeasures()
+  // setCarouselMeasures()
   handleCarouselColor()
 
   // carousel
-  $('.carousel-button').click(e => { handleMoveCarousel(e) })
+  // $('.carousel-button').click(e => { handleMoveCarousel(e) })
 
   // photo carousel
   // $('.photo-carousel').slick({
@@ -110,14 +106,16 @@ window.onload = function () {
     if (menuIsOpen()) {
       handleMenuClick()
     }
-    setCarouselMeasures()
-    handleMoveCarousel('resize')
+    // setCarouselMeasures()
+    // handleMoveCarousel('resize')
     handleRensponsivness()
-  }, 200))
+  }, 500))
 
   // counter
   var counterNumbersEl = document.querySelectorAll('.counterNumber');
+  
   window.addEventListener('scroll', _.debounce(function () {
+    console.log('debounced scroll')
     //handle counters
     if (!counterAnimationWasExecuted()) {
       counterNumbersEl.forEach(function (element, index) {
@@ -128,7 +126,7 @@ window.onload = function () {
     }
 
     handleMenuHighlight()
-  }, 200))
+  }, 250))
 }
 
 // *********************
@@ -163,9 +161,9 @@ function handleMenuClick() {
   // change hb icon
   document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
   // open | close header height
-  var startHeight = headerHeight + 'px'
-  var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
-  var finalPosition = menuIsOpen() ? endHeight : startHeight
+  // var startHeight = headerHeight + 'px'
+  // var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
+  // var finalPosition = menuIsOpen() ? endHeight : startHeight
   // document.getElementsByTagName('header')[0].classList.toggle('is-closed')
   // document.getElementsByTagName('header')[0].classList.toggle('is-open')
   $("header").toggleClass('is-closed, is-open')
@@ -221,7 +219,7 @@ function fireCounterAnimation(element, index) {
   counterAnimationExecuted[index] = true
   var finalValue = values[index]
 
-  var interval = Math.round(1500 / finalValue)
+  var interval = Math.round(800 / finalValue)
 
   for (var i = 0; i <= finalValue; i++) { doAnimation(i) }
 
@@ -230,56 +228,57 @@ function fireCounterAnimation(element, index) {
   }
 }
 
-function setCarouselMeasures () {
-  // var stepSize = this.state.viewportWidth * (0.8)
-  stepSize = $('#carousel').children(":first").width()
-  console.log('stepsize', stepSize)
-  cardsNumber = $("#carousel > *").length
-  console.log('cardsNumber', cardsNumber)
-  maxDistance = cardsNumber * stepSize - $(window).width() + 100
-  console.log('maxDistance', maxDistance)
-}
 
 // carousel
-function handleMoveCarousel (event) {
-  console.log('carouselPosition', carouselPosition)
+// function setCarouselMeasures () {
+//   // var stepSize = this.state.viewportWidth * (0.8)
+//   stepSize = $('#carousel').children(":first").width()
+//   console.log('stepsize', stepSize)
+//   cardsNumber = $("#carousel > *").length
+//   console.log('cardsNumber', cardsNumber)
+//   maxDistance = cardsNumber * stepSize - $(window).width() + 100
+//   console.log('maxDistance', maxDistance)
+// }
 
-  event.preventDefault()
+// function handleMoveCarousel (event) {
+//   console.log('carouselPosition', carouselPosition)
+
+//   event.preventDefault()
 
 
-  if (event !== 'resize') {
-    var stepInstance = event.target.id === 'left-button' ? -1 : 1
+//   if (event !== 'resize') {
+//     var stepInstance = event.target.id === 'left-button' ? -1 : 1
 
-    var nextPosition = carouselPosition + stepInstance
-    var nextDistance = nextPosition * stepSize    
-    console.log('nextDistance', nextDistance)
-    if (nextDistance > 0 && nextDistance <= maxDistance) {
-      carouselPosition = nextPosition
-      $('#left-button,#right-button').css('visibility', 'visible')
-      if (maxDistance - nextDistance < stepSize / 2) $('#right-button').css('visibility', 'hidden')
-    } else if (nextDistance <= 0) {
-      carouselPosition = 0
-      $('#left-button').css('visibility', 'hidden')
-    } 
-  }
+//     var nextPosition = carouselPosition + stepInstance
+//     var nextDistance = nextPosition * stepSize    
+//     console.log('nextDistance', nextDistance)
+//     if (nextDistance > 0 && nextDistance <= maxDistance) {
+//       carouselPosition = nextPosition
+//       $('#left-button,#right-button').css('visibility', 'visible')
+//       if (maxDistance - nextDistance < stepSize / 2) $('#right-button').css('visibility', 'hidden')
+//     } else if (nextDistance <= 0) {
+//       carouselPosition = 0
+//       $('#left-button').css('visibility', 'hidden')
+//     } 
+//   }
 
-  var translationSize = carouselPosition * stepSize
+//   var translationSize = carouselPosition * stepSize
 
-  $('#carousel').css({
-    '-webkit-transform': `translate(-${translationSize}px)`,
-    '-ms-transform': `translate(-${translationSize}px)`,
-    'transform': `translate(-${translationSize}px)`
-  })
-}
+//   $('#carousel').css({
+//     '-webkit-transform': `translate(-${translationSize}px)`,
+//     '-ms-transform': `translate(-${translationSize}px)`,
+//     'transform': `translate(-${translationSize}px)`
+//   })
+// }
 
 function handleCarouselColor () {
   var colors = ['#a9d7de', '#a3b1b4', '#c4deb7', '#89bd97']
 
-  const cards = document.querySelectorAll("#carousel > *")
+  const cards = document.querySelectorAll(".service-box")
 
   console.log(cards)
   var colorIndex = 0
-  for (var i = 0; i < cardsNumber; i++) {
+  for (var i = 0; i < cards.length; i++) {
     $(cards[i]).css('background-color', colors[colorIndex])
     colorIndex < colors.length - 1 ? colorIndex++ : colorIndex = 0
   }
