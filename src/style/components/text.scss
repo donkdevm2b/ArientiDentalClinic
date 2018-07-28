@@ -10,12 +10,18 @@ h1 {
 }
 
 p {
+  -webkit-margin-after: 10px;
+  -webkit-margin-before: 0rem;    
   line-height: 1.42;
   
   &.paragraph {
     padding-left: 6vw;
     padding-right: 6vw;
     text-align: justify;
+  }
+
+  &.big-text {
+    font-size: 20px;
   }
 }
 

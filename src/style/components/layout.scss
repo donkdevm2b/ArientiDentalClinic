@@ -55,3 +55,22 @@ section {
   padding-top: 1.25rem;
 }
 
+// large
+@media only screen and (min-width: $my-medium-break-point) {
+  #chi-siamo {
+    .text-container {
+      padding-left: 20vw;
+      padding-right: 20vw;
+    }
+  }
+}
+
+// medium
+@media only screen and (min-width: $my-small-break-point) and (max-width: $my-medium-break-point) {
+  #chi-siamo {
+    .text-container {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+  }
+}
