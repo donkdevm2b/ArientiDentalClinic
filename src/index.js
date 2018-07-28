@@ -44,6 +44,9 @@ window.onload = function () {
   $('.owl-carousel.docs-carousel').owlCarousel({
     loop: true,
     margin: 30,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 500,        
     responsive: {
       0: {
         items: 1
@@ -58,6 +61,9 @@ window.onload = function () {
   })
   $('.owl-carousel.services-carousel').owlCarousel({
     loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 500,    
     responsive: {
       0: {
         items: 1
