@@ -45,7 +45,7 @@ window.onload = function () {
   //   infinite: true,
   // });
   // $('.owl-carousel').owlCarousel();
-  $('.owl-carousel').owlCarousel({
+  $('.owl-carousel.docs-carousel').owlCarousel({
     loop: true,
     margin: 30,
     responsive: {
@@ -59,7 +59,21 @@ window.onload = function () {
         items: 3
       }
     }
-  });
+  })
+  $('.owl-carousel.services-carousel').owlCarousel({
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      640: {
+        items: 2
+      },
+      1024: {
+        items: 4
+      }
+    }
+  })
   // $('.photo-carousel > div').on('', function (e) {
   //   console.log('drag', e)
   // }, false);
