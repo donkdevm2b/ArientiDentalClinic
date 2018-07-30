@@ -44,7 +44,7 @@ hr {
   background-color: #f5f5f5;
   background-color: $main-color;
   padding: 2rem 5vw;
-  margin-top: 3rem;
+  margin-top: 2rem;
   h5 {color: $text-color}
   h4,a, hr, p {color: white; text-decoration: none;}
 }
@@ -93,6 +93,17 @@ hr {
   // .hovered {
   //   border-bottom: $highlight-border;
   // }
+}
+
+#navigation {
+  padding-top: 2rem;
+  border-top: $light-border;
+  font-size: 13px;
+  letter-spacing: 2px;
+  i {
+    font-size: 20px !important;
+    font-weight: 200;
+  }
 }
 
 
