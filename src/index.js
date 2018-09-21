@@ -34,15 +34,14 @@ window.onload = function () {
     handleMenuClick()
   }
 
+  $("#footerInjection").load("/html/footer.html")
+
   // handle rensponsive elements
   handleRensponsivness()
   handleMenuHighlight()
-  // setCarouselMeasures()
   handleCarouselColor()
 
   // carousel
-  // $('.carousel-button').click(e => { handleMoveCarousel(e) })
-
   // photo carousel
   $('.owl-carousel.docs-carousel').owlCarousel({
     loop: true,

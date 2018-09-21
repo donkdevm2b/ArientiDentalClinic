@@ -2,15 +2,20 @@ const webpack = require('webpack')
 const path = require('path')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel';
-
 module.exports = {
-  entry: [
-    'script-loader!jquery/dist/jquery.min.js',
-    // 'script-loader!slick-carousel/slick/slick.min.js',
-    './src/index.js'
-  ],
+  entry: {
+    bundle:[
+      'script-loader!jquery/dist/jquery.min.js',
+      './src/index.js'
+    ],
+    service:[
+      'script-loader!jquery/dist/jquery.min.js',
+      './src/service.js'
+    ],
+    menu:[
+      './src/menu.js'
+    ]
+  },
   externals: {
     jquery: 'jQuery'
   },
@@ -52,7 +57,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
