@@ -16,6 +16,8 @@ const headerHeight = 62
 // counter
 var counterAnimationExecuted = [false, false, false, false]
 const values = [20, 1630, 16, 8]
+var sizedElements = []
+
 // carousel
 // var carouselPosition = 0
 // var stepSize, cardsNumber, maxDistance
@@ -109,7 +111,13 @@ window.onload = function () {
     // setCarouselMeasures()
     // handleMoveCarousel('resize')
     handleRensponsivness()
+    clearSizedElements()
   }, 500))
+
+function clearSizedElements () {
+  for (var el of sizedElements) el.boundaries = undefined
+  sizedElements = []
+}
 
   // counter
   var counterNumbersEl = document.querySelectorAll('.counterNumber')
@@ -173,14 +181,43 @@ function scrollToId(id) {
   $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500)
 }
 
-function isInViewport (elem) {
-  if (elem) {
-    var bounding = elem.getBoundingClientRect()
-
-    if (bounding.top >= 0 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)) return true
-    if (bounding.top < 0 && bounding.bottom > 200) return true
-  }
+function calcBoundaries (elem) {
+  var boundaries = {}
+  var elementTop = $(elem).offset().top
+  var elementBottom = elementTop + $(elem).outerHeight()
+  boundaries.bottom = elementBottom
+  boundaries.top = elementTop
+  elem.boundaries = boundaries
+  sizedElements.push(elem)
+  console.log('calcBoundaries', sizedElements.length)
 }
+
+function isInViewport (elem) {
+  if (!elem.boundaries) {
+    calcBoundaries(elem)
+  }
+
+  var viewportTop = $(window).scrollTop()
+  var viewportBottom = viewportTop + $(window).height()
+  console.log(elem.boundaries)
+  console.log(viewportBottom, viewportTop)
+  return elem.boundaries.bottom > viewportTop + 200 && elem.boundaries.top < viewportBottom
+}
+// function isInViewport (elem) {
+//   if (elem) {
+//     if (!elem._boundingSizes) {
+//       elem._boundingSizes = elem.getBoundingClientRect()
+//       sizedElements.push(elem)
+//     }
+//     var bounding2 = elem._boundingSizes
+//     var bounding = elem.getBoundingClientRect()
+//     console.log(elem)
+//     console.log(bounding)
+//     console.log(bounding2)
+//     if (bounding.top >= 0 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)) return true
+//     if (bounding.top < 0 && bounding.bottom > 200) return true
+//   }
+// }
 
 // handle rensponsive elements
 function handleRensponsivness () {
@@ -223,7 +260,6 @@ function handleCarouselColor () {
 
   const cards = document.querySelectorAll(".service-box")
 
-  console.log(cards)
   var colorIndex = 0
   for (var i = 0; i < cards.length; i++) {
     $(cards[i]).css('background-color', colors[colorIndex])
