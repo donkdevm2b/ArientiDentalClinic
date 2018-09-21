@@ -10,6 +10,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.min.css'
 // *********************
 // ***** variables *****
 // *********************
+
 // header
 const headerHeight = 62
 // counter
@@ -99,17 +100,8 @@ window.onload = function () {
     }
   })
 
-  // resize event
-  // window.addEventListener('resize', function () {
-  //   // close menu section if it's open
-  //   if (menuIsOpen()) {
-  //     handleMenuClick()
-  //   }
-  //   setCarouselMeasures()
-  //   handleMoveCarousel('resize')
-  //   handleRensponsivness()
-  // })
   window.addEventListener('resize', _.debounce(function () {
+    console.log('resize listener')
     // close menu section if it's open
     if (menuIsOpen()) {
       handleMenuClick()
@@ -120,7 +112,7 @@ window.onload = function () {
   }, 500))
 
   // counter
-  var counterNumbersEl = document.querySelectorAll('.counterNumber');
+  var counterNumbersEl = document.querySelectorAll('.counterNumber')
   
   window.addEventListener('scroll', _.debounce(function () {
     console.log('debounced scroll')
@@ -168,14 +160,7 @@ function handleMenuHighlight () {
 function handleMenuClick() {
   // change hb icon
   document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
-  // open | close header height
-  // var startHeight = headerHeight + 'px'
-  // var endHeight = headerHeight + document.getElementById('menu-section').offsetHeight + 'px'
-  // var finalPosition = menuIsOpen() ? endHeight : startHeight
-  // document.getElementsByTagName('header')[0].classList.toggle('is-closed')
-  // document.getElementsByTagName('header')[0].classList.toggle('is-open')
   $("header").toggleClass('is-closed, is-open')
-  // document.getElementsByTagName('header')[0].style.height = finalPosition
 }
 
 // check if menu is open
@@ -190,13 +175,7 @@ function scrollToId(id) {
 
 function isInViewport (elem) {
   if (elem) {
-    var bounding = elem.getBoundingClientRect();
-    if ($(elem).attr('id') === 'servizi') {
-      console.log('isInViewPort? ', elem)
-      console.log('top: ', bounding.top)
-      console.log('bottom: ', bounding.bottom)
-      console.log('btm comparison: ', (window.innerHeight || document.documentElement.clientHeight))
-    }
+    var bounding = elem.getBoundingClientRect()
 
     if (bounding.top >= 0 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)) return true
     if (bounding.top < 0 && bounding.bottom > 200) return true
@@ -223,61 +202,21 @@ function counterAnimationWasExecuted() {
 }
 
 function fireCounterAnimation(element, index) {
-  element.style.visibility = 'visible'
   counterAnimationExecuted[index] = true
-  var finalValue = values[index]
 
-  var interval = Math.round(800 / finalValue)
+  var totalTime = 1630
 
-  for (var i = 0; i <= finalValue; i++) { doAnimation(i) }
-
-  function doAnimation(i) {
-    setTimeout(function () { element.innerHTML = i; }, i * interval)
-  }
+  element.style.visibility = 'visible'
+  $(element).prop('Counter', 0).animate({
+    Counter: $(element).text()
+  }, {
+      duration: totalTime,
+      easing: 'linear',
+      step: function (now) {
+        $(element).text(Math.ceil(now))
+      }
+    })
 }
-
-
-// carousel
-// function setCarouselMeasures () {
-//   // var stepSize = this.state.viewportWidth * (0.8)
-//   stepSize = $('#carousel').children(":first").width()
-//   console.log('stepsize', stepSize)
-//   cardsNumber = $("#carousel > *").length
-//   console.log('cardsNumber', cardsNumber)
-//   maxDistance = cardsNumber * stepSize - $(window).width() + 100
-//   console.log('maxDistance', maxDistance)
-// }
-
-// function handleMoveCarousel (event) {
-//   console.log('carouselPosition', carouselPosition)
-
-//   event.preventDefault()
-
-
-//   if (event !== 'resize') {
-//     var stepInstance = event.target.id === 'left-button' ? -1 : 1
-
-//     var nextPosition = carouselPosition + stepInstance
-//     var nextDistance = nextPosition * stepSize    
-//     console.log('nextDistance', nextDistance)
-//     if (nextDistance > 0 && nextDistance <= maxDistance) {
-//       carouselPosition = nextPosition
-//       $('#left-button,#right-button').css('visibility', 'visible')
-//       if (maxDistance - nextDistance < stepSize / 2) $('#right-button').css('visibility', 'hidden')
-//     } else if (nextDistance <= 0) {
-//       carouselPosition = 0
-//       $('#left-button').css('visibility', 'hidden')
-//     } 
-//   }
-
-//   var translationSize = carouselPosition * stepSize
-
-//   $('#carousel').css({
-//     '-webkit-transform': `translate(-${translationSize}px)`,
-//     '-ms-transform': `translate(-${translationSize}px)`,
-//     'transform': `translate(-${translationSize}px)`
-//   })
-// }
 
 function handleCarouselColor () {
   var colors = ['#a9d7de', '#a3b1b4', '#c4deb7', '#89bd97']
