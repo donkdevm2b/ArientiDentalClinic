@@ -44,6 +44,20 @@ $test-borderB: 2px solid blue;
 
 $header-height: 62px;
 
+.test1 {
+  border: $test-borderR;
+  background-color: red;
+  opacity: 0.2;
+}
+.test2 {
+  border: $test-borderG;
+  background-color: red;
+  opacity: 0.2;
+}
+.test3 {
+  border: $test-borderB
+}
+
 // font
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Raleway:400,500,700');
 

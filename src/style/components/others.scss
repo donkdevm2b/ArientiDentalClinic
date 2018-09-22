@@ -135,7 +135,49 @@ section#cards{
       letter-spacing: 1px;  
     }
   }
-} 
+}
+
+.button {
+  padding: 2rem;
+  background-color: $main-color;
+  width: 100%;
+  color: white;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  transition: 0.2s linear;
+  letter-spacing: 1px;
+  &:hover {
+    font-weight: 400;
+    cursor: pointer;
+    background-color: $my-medium-grey;
+  }
+}
+
+.intro-wall {
+  height: 100vh;
+  width: 100vw;
+  background:  
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ), 
+    url("/asset/img/smile.jpg");
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+  h1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 55px;
+    color: white;
+  }
+  h6 {
+    color: white;
+    letter-spacing: 1px;
+  }
+}
 
 // SMALL
 @media only screen and (max-width: $my-small-break-point) {

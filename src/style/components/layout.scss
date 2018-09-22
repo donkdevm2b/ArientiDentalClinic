@@ -11,6 +11,12 @@
   justify-content: center;
 }
 
+.hv-align-center {
+  display: table-cell;
+  text-align:center;
+  vertical-align:middle;
+}
+
 section {
   background-color: white;
   // padding: 2rem 0vw;
