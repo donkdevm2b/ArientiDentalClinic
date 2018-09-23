@@ -1,4 +1,3 @@
-var $ = require('jquery')
 import './style/style.scss'
 var menu = require('./menu.js')
 

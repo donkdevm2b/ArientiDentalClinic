@@ -5,11 +5,11 @@ const path = require('path')
 module.exports = {
   entry: {
     bundle:[
-      'script-loader!jquery/dist/jquery.min.js',
+      // 'script-loader!jquery/dist/jquery.min.js',
       './src/index.js'
     ],
     service:[
-      'script-loader!jquery/dist/jquery.min.js',
+      // 'script-loader!jquery/dist/jquery.min.js',
       './src/service.js'
     ],
     menu:[

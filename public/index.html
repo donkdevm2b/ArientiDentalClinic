@@ -419,7 +419,7 @@
   </div>
 
   <!-- ****** contacts ***** -->
-  <div class='grid-x bk-c-w'>
+  <div class='grid-x bk-c-w md-pd-bt'>
 
     <div id='contatti' class="my-small-12 my-medium-12 my-large-6 h-align-center v-align-center responsive-contacts contacts-container">
       <div>
@@ -438,11 +438,14 @@
         SCRIVICI<img src="/asset/icon/icon.png" class='inner-logo' />
       </h3>
       <hr>
-      <form action="">
+      <form id='message' action="" class='grid-x'>
         <input class="my-small-12 my-medium-12 my-large-12" type='text' placeholder='Il tuo nome' autoComplete='givenName'>
         <input class="my-small-12 my-medium-12 my-large-12" type='email' placeholder='La tua email' autoComplete='email'>
         <input class="my-small-12 my-medium-12 my-large-12" type='tel' placeholder='Il tuo numero di telefono' autoComplete='mobile tel'>
-        <textarea class="my-small-12 my-medium-12 my-large-12" name="" id="" cols="30" rows="10" placeholder="Il tuo messaggio"></textarea>
+        <textarea class="my-small-12 my-medium-12 my-large-12" name="" id="message-area" cols="30" rows="10" placeholder="Il tuo messaggio"></textarea>
+        <a class='button my-small-12 my-medium-12 my-large-12' id='send-button' style='display: none'>
+        INVIA MESSAGGIO
+        </a>
       </form>
     </div>
   </div>

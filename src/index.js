@@ -1,6 +1,6 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
-var $ = require('jquery')
 var _ = require('underscore')
+var home = require('./home.js')
 import './style/style.scss'
 import 'owl.carousel'
 import 'owl.carousel/dist/owl.carousel.min.js'
@@ -15,7 +15,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.min.css'
 const headerHeight = 62
 // counter
 var counterAnimationExecuted = [false, false, false, false]
-const values = [20, 1630, 16, 8]
+// const values = [20, 1630, 16, 8]
 var sizedElements = []
 
 // carousel
@@ -134,6 +134,8 @@ function clearSizedElements () {
 
     handleMenuHighlight()
   }, 250))
+
+  home.init()
 }
 
 // *********************
