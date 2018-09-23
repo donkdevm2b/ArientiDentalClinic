@@ -6,4 +6,8 @@
 .inner-logo {
   margin-left: 0.6rem;
   width: 19px;
+
+  &.small {
+    width: 12px;
+  }
 }

@@ -43,8 +43,7 @@ hr {
   background-color: $my-medium-grey;
   background-color: #f5f5f5;
   background-color: $main-color;
-  padding: 2rem 5vw;
-  margin-top: 2rem;
+  padding: 4rem 5vw 2rem;
   h5 {color: $text-color}
   h4,a, hr, p {color: white; text-decoration: none;}
 }
@@ -138,7 +137,7 @@ section#cards{
 }
 
 .button {
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   background-color: $main-color;
   width: 100%;
   color: white;
@@ -157,25 +156,34 @@ section#cards{
 .intro-wall {
   height: 100vh;
   width: 100vw;
-  background:  
-    linear-gradient(
-      rgba(0, 0, 0, 0.4), 
-      rgba(0, 0, 0, 0.4)
-    ), 
-    url("/asset/img/smile.jpg");
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: cover;
-  h1 {
-    font-family: Montserrat;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 55px;
-    color: white;
+
+  &.iw-pic {
+    position: fixed;
+    background:  
+      linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ), 
+      url("/asset/img/smile.jpg");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
   }
-  h6 {
-    color: white;
-    letter-spacing: 1px;
+
+
+  &.iw-text {
+    h1 {
+      font-family: Montserrat;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 55px;
+      color: white;
+    }
+    h6 {
+      color: white;
+      letter-spacing: 1px;
+    }
   }
 }
 
