@@ -18,6 +18,9 @@ var counterAnimationExecuted = [false, false, false, false]
 // const values = [20, 1630, 16, 8]
 var sizedElements = []
 
+var setMenuType
+var setMenuScrollEffect
+
 // carousel
 // var carouselPosition = 0
 // var stepSize, cardsNumber, maxDistance
@@ -40,6 +43,7 @@ window.onload = function () {
   handleRensponsivness()
   handleMenuHighlight()
   handleCarouselColor()
+  handleMenuType()
 
   // carousel
   // photo carousel
@@ -101,7 +105,7 @@ window.onload = function () {
     }
   })
 
-  window.addEventListener('resize', _.debounce(function () {
+  window.addEventListener('resize', function () {
     console.log('resize listener')
     // close menu section if it's open
     if (menuIsOpen()) {
@@ -109,9 +113,10 @@ window.onload = function () {
     }
     // setCarouselMeasures()
     // handleMoveCarousel('resize')
+    handleMenuType()
     handleRensponsivness()
     clearSizedElements()
-  }, 500))
+  })
 
 function clearSizedElements () {
   for (var el of sizedElements) el.boundaries = undefined
@@ -123,6 +128,7 @@ function clearSizedElements () {
   
   window.addEventListener('scroll', _.debounce(function () {
     console.log('debounced scroll')
+    console.log($(window).scrollTop())
     //handle counters
     if (!counterAnimationWasExecuted()) {
       counterNumbersEl.forEach(function (element, index) {
@@ -131,9 +137,9 @@ function clearSizedElements () {
         }
       }, this)
     }
-
+    handleMenuType('scroll')
     handleMenuHighlight()
-  }, 250))
+  }, 100))
 
   home.init()
 }
@@ -143,6 +149,49 @@ function clearSizedElements () {
 // *********************
 
 // menu
+function handleMenuType(action) {
+  if (action !== 'scroll') {
+    // handle menu type according to viewport width
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    console.log('switchMenu: ' + w)
+    var menuType = w > 919 ? 'desktop-menu' : 'mobile-menu'
+    if (menuType !== setMenuType) {
+      $('header').removeClass(setMenuType).addClass(menuType)
+      setMenuType = menuType
+      console.log('123 setMenuType: ' + setMenuType)
+      if (setMenuType === 'mobile-menu') {
+        handleMenuScrollEffect(false)
+      }
+    }
+  }
+
+  // handle menu effect according to scroll
+  console.log('xxx', $(window).scrollTop())
+  if (setMenuType === 'desktop-menu') {
+    handleMenuScrollEffect($(window).scrollTop() === 0)
+  }
+}
+
+function handleMenuScrollEffect(trigger) {
+  if (trigger) {
+    // trigger effect ON
+    if (trigger !== setMenuScrollEffect) {
+      console.log('123 set Effect: ON')
+      setMenuScrollEffect = true
+      $('header').addClass('effectON')
+      $('#logo-container').children('img').attr('src', '/asset/img/logoWhite.png')
+    }
+  } else {
+    if (setMenuScrollEffect) {
+      console.log('123 set Effect: OFF')
+      // trigger effect OFF
+      setMenuScrollEffect = false
+      $('header').removeClass('effectON')
+      $('#logo-container').children('img').attr('src', '/asset/img/logo.png')
+    }
+  }
+}
+
 function handleMenuHighlight () {
   // highlight menu onview section
   menuList.some(function (elName) {

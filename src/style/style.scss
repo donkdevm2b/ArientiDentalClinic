@@ -9,7 +9,7 @@
 @import "components/carousel";
 
 // header
-$header-breakpoint: 920px;
+$header-breakpoint: 920;
 
 header {
   z-index: 99999;
@@ -17,10 +17,14 @@ header {
   overflow-y: hidden;
   letter-spacing: 1px;
   animation-direction: normal;
-  // transition: 0.5s ease;
-  transition: 0.25s ease;
+  transition: 0.2s linear;
   background-color: white;
   color: #191b1d;  
+
+  &.desktop-menu.effectON {
+    color: white;
+    background-color: transparent;
+  }
 
   &.sticky {
     position: fixed;
@@ -28,7 +32,7 @@ header {
     width: 100%;
   }
 
-  &.is-closed {
+  &.is-closed:not(.desktop-menu) {
     -moz-box-shadow: $lower-box-shadow;
     -webkit-box-shadow: $lower-box-shadow;
     box-shadow: $lower-box-shadow;
@@ -54,7 +58,7 @@ header {
   }
   p {
     animation-direction: normal;
-    transition: 0.2s ease;
+    transition: 0.2s linear;
     font-size: 10px;
     letter-spacing: 2px;
     // color: #191b1d;
@@ -67,7 +71,7 @@ header {
 
 .clickable {
   animation-direction: normal;
-  transition: 0.2s ease;
+  transition: 0.2s linear;
 }
 
 #logo-container {
@@ -112,7 +116,7 @@ header {
 }
 
 // screen smaller than breakpoint
-@media only screen and (max-width: $header-breakpoint) {
+@media only screen and (max-width: #{($header-breakpoint - 1)}px) {
   .collapse-small {
     display: none;
   }
@@ -124,7 +128,7 @@ header {
 }
 
 // screen bigger than breakpoint
-@media only screen and (min-width: $header-breakpoint) {
+@media only screen and (min-width: #{($header-breakpoint)}px) {
   .collapse-big {
     display: none;
   }
