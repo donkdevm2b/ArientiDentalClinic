@@ -159,6 +159,7 @@ section#cards{
   width: 100vw;
 
   &.iw-pic {
+    transition: 0.5s linear;
     position: fixed;
     background:  
       linear-gradient(
