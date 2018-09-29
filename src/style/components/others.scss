@@ -166,7 +166,12 @@ section#cards{
         rgba(0, 0, 0, 0.4)
       ), 
       url("/asset/img/smile.jpg");
-    background-repeat:no-repeat;
+      // url("/asset/img/introwall/marilynMonroeSmiling.jpg");
+      // url("/asset/img/introwall/girlSmiling.jpg");      
+      // url("/asset/img/introwall/manSmiling.jpg");      
+      // url("/asset/img/introwall/happyMan.jpg");      
+      // url("/asset/img/introwall/barackObamaSmiling.jpg");      
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     z-index: -1;
@@ -180,6 +185,15 @@ section#cards{
       letter-spacing: 1px;
       font-size: 55px;
       color: white;
+list-style-image:
+none
+;
+list-style-position:
+outside
+;
+list-style-type:
+none
+;      
     }
     h6 {
       color: white;
