@@ -1,7 +1,7 @@
 console.log('*************\nArientiDentalClinic\n' + new Date + '\n************')
 var _ = require('underscore')
 var home = require('./home.js')
-var test = require('./test.js')
+// var test = require('./test.js')
 import './style/style.scss'
 import 'owl.carousel'
 import 'owl.carousel/dist/owl.carousel.min.js'
@@ -143,7 +143,7 @@ function clearSizedElements () {
   }, 100))
 
   home.init()
-  test.init()
+  // test.init()
 }
 
 // *********************
