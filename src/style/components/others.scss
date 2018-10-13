@@ -158,6 +158,11 @@ section#cards{
   height: 100vh;
   width: 100vw;
 
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
   &.iw-pic {
     transition: 0.5s linear;
     position: fixed;
@@ -186,15 +191,9 @@ section#cards{
       letter-spacing: 1px;
       font-size: 55px;
       color: white;
-list-style-image:
-none
-;
-list-style-position:
-outside
-;
-list-style-type:
-none
-;      
+      list-style-image: none;
+      list-style-position: outside;
+      list-style-type: none;      
     }
     h6 {
       color: white;
