@@ -310,7 +310,7 @@ function fireCounterAnimation(element, index) {
 }
 
 function handleCarouselColor () {
-  var colors = ['#a9d7de', '#a3b1b4', '#c4deb7', '#89bd97']
+  var colors = ['#a9d7de', '#a3b1b4', '#A7CBAA', '#76c491']
 
   const cards = document.querySelectorAll(".service-box")
 

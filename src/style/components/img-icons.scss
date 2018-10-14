@@ -14,4 +14,25 @@
 
 .img-box {
   max-width:100%; vertical-align: middle;
+  &#love {
+    object-fit: cover;
+    height: 100%;    
+  }
+}
+
+// medium and small
+@media only screen and (max-width: $my-medium-break-point) {
+  .img-box {
+    &#love {
+      height: auto;  
+    }
+  }
+}
+// large
+@media only screen and (min-width: $my-medium-break-point) {
+  .img-box {
+    &#love {
+      max-height: 600px;  
+    }
+  }
 }

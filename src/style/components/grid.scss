@@ -94,7 +94,7 @@ $my-medium-break-point: 1024px;
   float: left;
 }
 
-.grid-x{
+.grid-x {
   align-items:center;
   &.grid-flex {
     display: flex;
@@ -109,4 +109,10 @@ $my-medium-break-point: 1024px;
 
 .cell {
   height: inherit;
+}
+
+@media (max-width: $my-medium-break-point) {
+  .grid-flex-collapse {
+    display: block !important;
+  }
 }

@@ -21,7 +21,9 @@ hr {
 }
 
 .side-box {
-  min-height: 250px;
+  &.min-250 {
+    min-height: 250px;
+  }
 }
 
 .responsive-contacts {

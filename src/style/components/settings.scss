@@ -12,9 +12,11 @@ $dark-text-color: #191b1d;
 
 // App Colors
 $main-color: #a9d7de;
-// third color is $my-medium-grey
-$third-color: #c4deb7;
-$fourth-color: #89bd97;
+// second color is $my-medium-grey
+$third-color: #A7CBAA;
+$fourth-color: #76c491;
+// $old third-color: #c4deb7;
+// old $fourth-color: #89bd97;
 
 // borders
 $light-border: 1px solid $light-grey;
@@ -46,13 +48,13 @@ $header-height: 62px;
 
 .test1 {
   border: $test-borderR;
-  background-color: red;
-  opacity: 0.2;
+  // background-color: red;
+  // opacity: 0.2;
 }
 .test2 {
   border: $test-borderG;
-  background-color: red;
-  opacity: 0.2;
+  // background-color: red;
+  // opacity: 0.2;
 }
 .test3 {
   border: $test-borderB
