@@ -12,9 +12,31 @@
   }
 }
 
+.fill {
+    background:  
+      linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ), 
+      url("/asset/img/love.jpeg");
+      // url("/asset/img/introwall/marilynMonroeSmiling.jpg");
+      // url("/asset/img/introwall/girlSmiling.jpg");      
+      // url("/asset/img/introwall/manSmiling.jpg");      
+      // url("/asset/img/introwall/happyMan.jpg");      
+      // url("/asset/img/introwall/barackObamaSmiling.jpg");      
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    // z-index: -1;
+}
+
+.fill#fill-services {
+  height: 600px;
+}
+
 .img-box {
   max-width:100%; vertical-align: middle;
-  &#love {
+  &#love {   
     object-fit: cover;
     height: 100%;    
   }

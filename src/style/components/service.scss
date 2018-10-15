@@ -1,12 +1,28 @@
 .service-small-box {
   transition: 0.1s linear;  
-  padding: 2rem 1rem;
-  border: $light-border;
+  padding: 2rem 2.5rem;
+
+  &#service-small-box1 {
+    background-color: $main-color;
+  }
+  &#service-small-box2 {
+    background-color: $my-medium-grey;
+  }
+  &#service-small-box3 {
+    background-color: $third-color;
+  }
+  &#service-small-box4 {
+    background-color: $fourth-color;
+  }
+
+  cursor: pointer;
+  color: white;
 
   hr {
-    border-top: 1px solid $text-color;      
-  }  
+    border-top: 1px solid white;      
+  }    
   &:hover {
+    border: $light-border;
     p, hr {
       -webkit-animation: pulse_animation 1.5s;
       -moz-animation:    pulse_animation 1.5s;
@@ -14,25 +30,12 @@
       animation:         pulse_animation 1.5s;
       animation-fill-mode: forwards; 
     }
-    cursor: pointer;
-    color: white;
-
+    color:$text-color;
+    background-color: white !important;
     hr {
-      border-top: 1px solid white;      
+      border-top: 1px solid $text-color;      
     }
 
-    &#service-small-box1 {
-      background-color: $main-color !important;
-    }
-    &#service-small-box2 {
-      background-color: $my-medium-grey !important;
-    }
-    &#service-small-box3 {
-      background-color: $third-color !important;
-    }
-    &#service-small-box4 {
-      background-color: $fourth-color !important;
-    }
   } 
 }
 
@@ -56,3 +59,63 @@
     height: 300px;
   }
 }
+
+// original animation
+// .service-small-box {
+//   transition: 0.1s linear;  
+//   padding: 2rem 1rem;
+//   border: $light-border;
+
+//   hr {
+//     border-top: 1px solid $text-color;      
+//   }  
+//   &:hover {
+//     p, hr {
+//       -webkit-animation: pulse_animation 1.5s;
+//       -moz-animation:    pulse_animation 1.5s;
+//       -o-animation:      pulse_animation 1.5s;
+//       animation:         pulse_animation 1.5s;
+//       animation-fill-mode: forwards; 
+//     }
+//     cursor: pointer;
+//     color: white;
+
+//     hr {
+//       border-top: 1px solid white;      
+//     }
+
+//     &#service-small-box1 {
+//       background-color: $main-color !important;
+//     }
+//     &#service-small-box2 {
+//       background-color: $my-medium-grey !important;
+//     }
+//     &#service-small-box3 {
+//       background-color: $third-color !important;
+//     }
+//     &#service-small-box4 {
+//       background-color: $fourth-color !important;
+//     }
+//   } 
+// }
+
+// @keyframes pulse_animation {
+//     0% { transform: scale(1); }
+//     33% { transform: scale(0.95); }
+//     66% { transform: scale(1.1); }    
+//     100% { transform: scale(1.08); }
+// }
+
+// @-webkit-keyframes pulse_animation {
+//     0% { transform: scale(1); }
+//     33% { transform: scale(0.95); }
+//     66% { transform: scale(1.1); }
+//     100% { transform: scale(1.08); }
+// }
+
+// // large
+// @media only screen and (min-width: $my-medium-break-point) {
+//   .service-small-box {
+//     height: 300px;
+//   }
+// }

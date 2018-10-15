@@ -34,7 +34,7 @@ header {
     width: 100%;
   }
 
-  &.is-closed:not(.desktop-menu) {
+  &.is-closed:not(.effectON) {
     -moz-box-shadow: $lower-box-shadow;
     -webkit-box-shadow: $lower-box-shadow;
     box-shadow: $lower-box-shadow;
