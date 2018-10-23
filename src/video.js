@@ -11,7 +11,7 @@ function init() {
     console.log('onYouTubeIframeAPIReady')
     player = new YT.Player('video1', {
       // videoId: '6So3Jru5Y1w',
-      videoId: 'ApPUsXBdM-4',
+      videoId: 'i7PniwJqyz0',
       playerVars: { 'controls': 0,
         'modestbranding': 1,
         'showinfo': 0,
@@ -20,7 +20,7 @@ function init() {
         'autoplay': 1,
         'fs': 0,
         'loop': 1,
-        'playlist': 'ApPUsXBdM-4' },
+        'playlist': 'i7PniwJqyz0' },
       events: {
         'onReady': onPlayerReady
       }      
