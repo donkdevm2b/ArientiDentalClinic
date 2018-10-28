@@ -4,11 +4,11 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index:[
+    index: [
       'script-loader!jquery/dist/jquery.min.js',
       './src/index.js'
     ],
-    service:[
+    service: [
       'script-loader!jquery/dist/jquery.min.js',
       './src/service.js'
     ]
@@ -21,7 +21,7 @@ module.exports = {
       'node_modules',
       path.resolve(__dirname, './src/style'),
       path.resolve(__dirname, './src/style/components')
-    ],  
+    ],
   },
   module: {
     rules: [
@@ -48,7 +48,7 @@ module.exports = {
             options: {}
           }
         ]
-      }      
+      }
     ]
   },
   output: {
@@ -59,9 +59,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     })
     // new BundleAnalyzerPlugin()
   ],

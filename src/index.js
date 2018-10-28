@@ -259,16 +259,16 @@ window.onload = () => {
   $('.menu-contatti').click(() => { scrollToId('#contatti') })
 
   // handle message
-  $('#message-area').keyup(function () {
+  $('#message-area').keyup(() => {
     console.log($(this).val().length)
-    var showSend = $(this).val().length > 0
+    const showSend = $(this).val().length > 0
     $('#send-button').css('display', showSend ? 'block' : 'none')
   })
 
   // panel
   $('.button-panel').click(e => {
     const id = e.target.id.slice(-1)
-    const otherButtonId = `#button-panel${id == '1' ? '2' : '1'}`
+    const otherButtonId = `#button-panel${id === '1' ? '2' : '1'}`
     console.log('button panel was clicked', id)
     console.log('otherButtonId', otherButtonId)
     if (!$(e.target).hasClass('hovered')) {
@@ -306,7 +306,7 @@ window.onload = () => {
     console.log($(window).scrollTop())
     // handle counters
     if (!counterAnimationWasExecuted()) {
-      counterNumbersEl.forEach(function (element, index) {
+      counterNumbersEl.forEach((element, index) => {
         if (isInViewport(element) && !counterAnimationExecuted[index]) {
           fireCounterAnimation(element, index)
         }
@@ -316,7 +316,6 @@ window.onload = () => {
     handleMenuHighlight()
   }, 100))
 
-  home.init()
   video.init()
   // test.init()
 }
