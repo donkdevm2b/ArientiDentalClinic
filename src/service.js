@@ -1,8 +1,10 @@
 import './style/style.scss'
-var menu = require('./menu.js')
+const menu = require('./menu.js')
 
-window.onload = function () {
+const services = ['ortodonzia-invisibile']
+
+window.onload = () => {
   document.getElementsByTagName('body')[0].classList.toggle('is-off')
-  $("#footerInjection").load("/html/footer.html")
-  $("#menuInjection").load("/html/menu.html", function () {menu.init()})
+  $('#footerInjection').load('/html/footer.html')
+  $('#menuInjection').load('/html/menu.html', () => { menu.init() })
 }

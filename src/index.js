@@ -129,23 +129,6 @@ function scrollToId(id) {
   $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500)
 }
 
-// function isInViewport (elem) {
-//   if (elem) {
-//     if (!elem._boundingSizes) {
-//       elem._boundingSizes = elem.getBoundingClientRect()
-//       sizedElements.push(elem)
-//     }
-//     let bounding2 = elem._boundingSizes
-//     let bounding = elem.getBoundingClientRect()
-//     console.log(elem)
-//     console.log(bounding)
-//     console.log(bounding2)
-//     if (bounding.top >= 0 && bounding.top <= (window.innerHeight
-//        || document.documentElement.clientHeight)) return true
-//     if (bounding.top < 0 && bounding.bottom > 200) return true
-//   }
-// }
-
 // handle rensponsive elements
 function handleRensponsivness() {
   const sbElement = document.getElementsByClassName('side-box')
@@ -317,5 +300,21 @@ window.onload = () => {
   }, 100))
 
   video.init()
-  // test.init()
 }
+
+// function isInViewport (elem) {
+//   if (elem) {
+//     if (!elem._boundingSizes) {
+//       elem._boundingSizes = elem.getBoundingClientRect()
+//       sizedElements.push(elem)
+//     }
+//     let bounding2 = elem._boundingSizes
+//     let bounding = elem.getBoundingClientRect()
+//     console.log(elem)
+//     console.log(bounding)
+//     console.log(bounding2)
+//     if (bounding.top >= 0 && bounding.top <= (window.innerHeight
+//        || document.documentElement.clientHeight)) return true
+//     if (bounding.top < 0 && bounding.bottom > 200) return true
+//   }
+// }

@@ -98,6 +98,7 @@ hr {
 
 #navigation {
   padding-top: 2rem;
+  padding-bottom: 2rem;
   border-top: $light-border;
   font-size: 13px;
   letter-spacing: 2px;
@@ -119,6 +120,7 @@ hr {
 section#cards{
   .card {
     padding: 4rem;
+    flex: 1;
 
     &:nth-of-type(1) {
       background-color: #eaeaea;

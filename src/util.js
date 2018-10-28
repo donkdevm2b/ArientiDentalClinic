@@ -1,5 +1,5 @@
 function init() {
-  //
+  // const
 }
 
 module.exports = {
