@@ -229,9 +229,9 @@
             <hr>
             <p>Il trattamento Invisalign permette un riallineamento dei denti in maniera discreta e rivoluzionaria</p>
           </div>
-          <div id="service-small-box2" class='my-small-12 my-medium-12 my-large-6 h-align-center service-small-box'>
+          <div id="service-small-box2" class='my-small-12 my-medium-12 my-large-6 h-align-center service-small-box' onclick="location.href='servizi/odontoiatria-pediatrica.html';">
             <p>
-              <img src="/asset/icon/icon.png" class='inner-logo' />
+              <img src="/asset/icon/icon.png" class='inner-logo'/>
             </p>
             <p>ODONTOIATRIA PEDIATRICA (PEDODONZIA)</p>
             <hr>
@@ -669,25 +669,21 @@
       }
 
       // info window
-      var contentString = '<div id="content">Arienti Dental Clinic</div>'
-
       var infowindow = new google.maps.InfoWindow({
-        content: contentString
+        content: '<div id="content" style="width: 300px; heigth: 50px;"><p>Arienti Dental Clinic</p></div>'
       })
-
-      infowindow.open(map, marker)
 
       // open google map at click
       google.maps.event.addListener(marker, 'click', function () {
         window.open(this.url, '_blank').focus();
       })
 
-
       // grey style
       var mapType = new google.maps.StyledMapType(style, { name: "Grayscale" });
       map.mapTypes.set('tehgrayz', mapType);
       map.setMapTypeId('tehgrayz');
 
+      infowindow.open(map, marker)
     }
   </script>
   <!-- <script src="/js/jquery-3.3.1.min.js"></script>     -->

@@ -118,6 +118,9 @@ hr {
 }
 
 section#cards{
+  #cards-container {
+    align-items: normal;
+  }
   .card {
     padding: 4rem;
     flex: 1;
