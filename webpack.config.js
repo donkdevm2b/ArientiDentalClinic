@@ -4,16 +4,13 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    bundle:[
+    index:[
       'script-loader!jquery/dist/jquery.min.js',
       './src/index.js'
     ],
     service:[
       'script-loader!jquery/dist/jquery.min.js',
       './src/service.js'
-    ],
-    menu:[
-      './src/menu.js'
     ]
   },
   externals: {

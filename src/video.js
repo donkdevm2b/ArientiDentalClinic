@@ -1,44 +1,28 @@
 function init() {
   console.log('VIDEO SCRIPT')
-  var tag = document.createElement('script')
-  tag.src = "https://www.youtube.com/iframe_api"
-  var firstScriptTag = document.getElementsByTagName('script')[0]
+  const tag = document.createElement('script')
+  tag.src = 'https://www.youtube.com/iframe_api'
+  const [firstScriptTag] = document.getElementsByTagName('script')
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
-  let player
-
-  window.onYouTubeIframeAPIReady = function () {
+  window.onYouTubeIframeAPIReady = () => {
     console.log('onYouTubeIframeAPIReady')
-    player = new YT.Player('video1', {
+    const player = new YT.Player('video1', {
       // videoId: '6So3Jru5Y1w',
       videoId: 'i7PniwJqyz0',
-      playerVars: { 'controls': 0,
-        'modestbranding': 1,
-        'showinfo': 0,
-        'hl': 'it',
-        'rel': 0,
-        'autoplay': 1,
-        'fs': 0,
-        'loop': 1,
-        'playlist': 'i7PniwJqyz0' },
-      events: {
-        'onReady': onPlayerReady
-      }      
+      playerVars: {
+        controls: 0,
+        modestbranding: 1,
+        showinfo: 0,
+        hl: 'it',
+        rel: 0,
+        autoplay: 1,
+        mute: 1,
+        fs: 0,
+        loop: 1,
+        playlist: 'i7PniwJqyz0' }
     })
   }
-
-  function onPlayerReady(event) {
-    event.target.setVolume(0)
-  };
-
-  // function pauseAndReset(video) {
-  //   video.pauseVideo();
-  //   video.seekTo(0);
-  // };
-
-  // function cleanTime(event) {
-  //   return Math.round(event.target.getCurrentTime());
-  // };
 }
 
 module.exports = {
