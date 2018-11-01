@@ -1,7 +1,7 @@
 import './style/style.scss'
 const menu = require('./menu.js')
 
-const services = ['ortodonzia-invisibile', 'odontoiatria-pediatrica', 'cosmetic-dentistry', 'sedazione-cosciente', 'ortodonzia', 'odontoiatria-protesica']
+const services = ['ortodonzia-invisibile', 'odontoiatria-pediatrica', 'cosmetic-dentistry', 'sedazione-cosciente', 'ortodonzia', 'odontoiatria-protesica', 'chirurgia-implantare']
 
 function handleNavigation(direction) {
   // get actual location
