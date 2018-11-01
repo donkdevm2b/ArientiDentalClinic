@@ -162,6 +162,7 @@ section#cards{
 }
 
 .intro-wall {
+  padding-top: 62px;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -216,6 +217,10 @@ section#cards{
 
 
   &.iw-text {
+    .button-container {
+      margin-top: 3rem;
+    }
+
     h1 {
       font-family: Montserrat;
       font-weight: 700;
@@ -236,6 +241,19 @@ section#cards{
 
 // SMALL
 @media only screen and (max-width: $my-small-break-point) {
+  .intro-wall {
+    img {
+      padding-bottom: 1rem;
+      width: 60px;    
+    }
+    &.iw-text {   
+      h1 {
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
+      } 
+    }   
+  }
+
   section#cards{
     .card {
       padding-left: 1rem;
