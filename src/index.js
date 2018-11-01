@@ -1,3 +1,5 @@
+/* eslint func-names:0*/
+
 console.log(`*************\nArientiDentalClinic\n + ${new Date()} + \n************`)
 const _ = require('underscore')
 const video = require('./video.js')
@@ -242,8 +244,7 @@ window.onload = () => {
   $('.menu-contatti').click(() => { scrollToId('#contatti') })
 
   // handle message
-  $('#message-area').keyup(() => {
-    console.log($(this).val().length)
+  $('#message-area').keyup(function() {
     const showSend = $(this).val().length > 0
     $('#send-button').css('display', showSend ? 'block' : 'none')
   })
