@@ -1,7 +1,7 @@
 /* eslint func-names:0*/
 
 console.log(`*************\nArientiDentalClinic\n + ${new Date()} + \n************`)
-const _ = require('underscore')
+const { debounce } = require('underscore')
 const video = require('./video.js')
 import './style/style.scss'
 import 'owl.carousel'
@@ -285,7 +285,7 @@ window.onload = () => {
   // counter
   const counterNumbersEl = document.querySelectorAll('.counterNumber')
 
-  window.addEventListener('scroll', _.debounce(() => {
+  window.addEventListener('scroll', debounce(() => {
     console.log('debounced scroll')
     console.log($(window).scrollTop())
     // handle counters

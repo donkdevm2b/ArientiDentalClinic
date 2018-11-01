@@ -12,6 +12,13 @@ h1 {
 h6 {
   font-size: 16px;
 }
+.text-section {
+  ul {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    text-align: justify;
+  }
+}
 
 p {
   -webkit-margin-after: 10px;
@@ -98,7 +105,7 @@ h3 {
 .text-container {
   // padding-top: 5rem;
   // padding-bottom: 3.5rem;
-  padding: 5rem 1rem 3.5rem;
+  padding: 3rem 2rem 2rem;
 }
 
 span.line {

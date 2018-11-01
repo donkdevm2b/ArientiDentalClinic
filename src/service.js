@@ -28,4 +28,7 @@ window.onload = () => {
   document.getElementById('nav-right').onclick = () => {
     handleNavigation('next')
   }
+  document.getElementsByTagName('section')[0].style.marginTop = '62px'
+  // console.log(section.style)
+  // section.style.marginTop = '62px'
 }
