@@ -1,4 +1,5 @@
 /* eslint func-names:0*/
+/* eslint max-statements:0*/
 
 console.log(`*************\nArientiDentalClinic\n + ${new Date()} + \n************`)
 const { debounce } = require('underscore')
@@ -299,6 +300,11 @@ window.onload = () => {
     handleMenuType('scroll')
     handleMenuHighlight()
   }, 100))
+
+  // handle hash
+  if (window.location.hash) {
+    scrollToId(window.location.hash)
+  }
 
   video.init()
 }
