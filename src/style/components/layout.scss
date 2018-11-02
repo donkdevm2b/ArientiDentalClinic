@@ -41,6 +41,9 @@ section {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
     &.service-page {
       margin-top: 3rem;
