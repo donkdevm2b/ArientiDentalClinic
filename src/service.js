@@ -1,7 +1,7 @@
 import './style/style.scss'
 const menu = require('./menu.js')
 
-const services = ['ortodonzia-invisibile', 'odontoiatria-pediatrica', 'cosmetic-dentistry', 'sedazione-cosciente', 'ortodonzia', 'odontoiatria-protesica', 'chirurgia-implantare', 'implantologia-all-on-4', 'chirurgia-mini-invasiva', 'parodontologia', 'endodonzia', 'odontoiatria-conservativa-avanzata']
+const services = ['ortodonzia-invisibile', 'odontoiatria-pediatrica', 'cosmetic-dentistry', 'sedazione-cosciente', 'ortodonzia', 'odontoiatria-protesica', 'chirurgia-implantare', 'implantologia-all-on-4', 'chirurgia-mini-invasiva', 'parodontologia', 'endodonzia', 'odontoiatria-conservativa-avanzata', 'igiene-dentale']
 
 function handleNavigation(direction) {
   // get actual location
