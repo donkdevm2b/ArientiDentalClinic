@@ -160,3 +160,15 @@
 .owl-carousel.owl-grab {
   cursor: -webkit-grabbing !important;
 }
+
+@media only screen and (max-width: $my-small-break-point) {
+.owl-carousel.services-carousel {
+  > div {
+    .service-box {
+      h3 {
+        font-size: 20px !important;
+      }  
+    }
+  }  
+}
+}

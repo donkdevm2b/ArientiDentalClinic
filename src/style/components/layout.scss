@@ -35,28 +35,10 @@ section {
   &.bg-img {
     margin-left: 0;
     margin-right: 0;
-    // height: 100vh;
-    // min-height: 100%;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-
-    // -webkit-background-attachment: fixed;
-    // -moz-background-attachment: fixed;
-    // -o-background-attachment: fixed;
-
-    // -webkit-background-repeat: no-repeat;
-    // -moz-background-repeat: no-repeat;
-    // -o-background-repeat: no-repeat;
-
-    // -webkit-background-position: center center;
-    // -moz-background-position: center center;
-    // -o-background-position: center center;
 
     &.service-page {
       margin-top: 3rem;
@@ -117,5 +99,19 @@ section {
       padding-left: 10vw;
       padding-right: 10vw;
     }
+  }
+}
+
+
+// SMALL
+@media only screen and (max-width: $my-small-break-point) {
+  section {
+    &.bg-img {
+      &.service-page {
+        margin-top: 3rem;
+        height: 40vh;
+        background-attachment: unset;
+      }
+    } 
   }
 }

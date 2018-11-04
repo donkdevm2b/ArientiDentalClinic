@@ -201,6 +201,7 @@ function initCarousel() {
     }
   })
   $('.owl-carousel.services-carousel').owlCarousel({
+    dots: false,
     loop: true,
     autoplay: true,
     autoplayTimeout: 3000,
