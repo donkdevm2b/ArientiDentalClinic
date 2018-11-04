@@ -1,9 +1,10 @@
 /* eslint func-names:0*/
 /* eslint max-statements:0*/
 
-console.log(`*************\nArientiDentalClinic\n + ${new Date()} + \n************`)
 const { debounce } = require('underscore')
 const video = require('./video.js')
+const menu = require('./menu.js')
+
 import './style/style.scss'
 import 'owl.carousel'
 import 'owl.carousel/dist/owl.carousel.min.js'
@@ -14,60 +15,15 @@ import 'owl.carousel/dist/assets/owl.theme.default.min.css'
 // ***** variables *****
 // *********************
 
-// header
-const headerHeight = 62
 // counter
 const counterAnimationExecuted = [false, false, false, false]
 let sizedElements = []
-
-let setMenuType
-let setMenuScrollEffect
-
 const menuList = ['chi-siamo', 'servizi', 'staff', 'dove', 'contatti']
 
 // *********************
 // ******* methods *****
 // *********************
-function handleMenuScrollEffect(trigger) {
-  if (trigger) {
-    // trigger effect ON
-    if (trigger !== setMenuScrollEffect) {
-      console.log('123 set Effect: ON')
-      setMenuScrollEffect = true
-      $('header').addClass('effectON')
-      $('#logo-container').children('img')
-        .attr('src', '/asset/img/logoWhite.png')
-    }
-  } else {
-    // trigger effect OFF
-    setMenuScrollEffect = false
-    $('header').removeClass('effectON')
-    $('#logo-container').children('img')
-      .attr('src', '/asset/img/logo.png')
-  }
-}
-// menu
-function handleMenuType(action) {
-  if (action !== 'scroll') {
-    // handle menu type according to viewport width
-    const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-    const menuType = w > 919 ? 'desktop-menu' : 'mobile-menu'
-    if (menuType !== setMenuType) {
-      $('header').removeClass(setMenuType)
-        .addClass(menuType)
-      setMenuType = menuType
-      if (setMenuType === 'mobile-menu') {
-        handleMenuScrollEffect(false)
-      }
-    }
-  }
 
-  // handle menu effect according to scroll
-  console.log('xxx', $(window).scrollTop())
-  if (setMenuType === 'desktop-menu') {
-    handleMenuScrollEffect($(window).scrollTop() === 0)
-  }
-}
 
 function calcBoundaries(elem) {
   const boundaries = {}
@@ -88,7 +44,7 @@ function isInViewport(elem) {
   const viewportTop = $(window).scrollTop()
   const viewportBottom = viewportTop + $(window).height()
   console.log(elem.boundaries)
-  console.log(viewportBottom, viewportTop)
+  console.log(viewportTop, viewportBottom)
   return elem.boundaries.bottom > viewportTop + 200 && elem.boundaries.top < viewportBottom
 }
 
@@ -112,26 +68,16 @@ function handleMenuHighlight() {
       // exit from loop
       return true
     }
+    // clear all
+    let globalString = ''
+    menuList.forEach(str => {
+      globalString += `.menu-${str},`
+    }, this)
+    globalString = globalString.slice(0, -1)
+    $(globalString).removeClass('hovered')
     return false
   }, this)
 }
-
-// check if menu is open
-function menuIsOpen() {
-  return document.getElementById('hamburger-button').innerHTML === 'close'
-}
-
-function handleMenuClick() {
-  // change hb icon
-  document.getElementById('hamburger-button').innerHTML = menuIsOpen() ? 'menu' : 'close'
-  $('header').toggleClass('is-closed, is-open')
-}
-
-function scrollToId(id) {
-  if (menuIsOpen()) handleMenuClick()
-  $('html,body').animate({ scrollTop: $(id).offset().top - headerHeight }, 500)
-}
-
 // handle rensponsive elements
 function handleRensponsivness() {
   const sbElement = document.getElementsByClassName('side-box')
@@ -222,29 +168,17 @@ function initCarousel() {
 }
 
 window.onload = () => {
+  $('#menuInjection').load('/html/menu.html', () => { menu.init() })
+  $('#footerInjection').load('/html/footer.html')
+
   // show body
   document.getElementsByTagName('body')[0].classList.toggle('is-off')
-
-  // catch hamburger-button click
-  document.getElementById('hamburger-button').onclick = () => {
-    handleMenuClick()
-  }
-
-  $('#footerInjection').load('/html/footer.html')
 
   // handle rensponsive elements
   handleRensponsivness()
   handleMenuHighlight()
   handleCarouselColor()
-  handleMenuType()
   initCarousel()
-
-  // handle navigation
-  $('.menu-chi-siamo,#logo-container').click(() => { scrollToId('#chi-siamo') })
-  $('.menu-servizi').click(() => { scrollToId('#servizi') })
-  $('.menu-staff').click(() => { scrollToId('#staff') })
-  $('.menu-dove').click(() => { scrollToId('#dove') })
-  $('.menu-contatti').click(() => { scrollToId('#contatti') })
 
   // handle message
   $('#message-area').keyup(function() {
@@ -273,14 +207,6 @@ window.onload = () => {
   }
 
   window.addEventListener('resize', () => {
-    console.log('resize listener')
-    // close menu section if it's open
-    if (menuIsOpen()) {
-      handleMenuClick()
-    }
-    // setCarouselMeasures()
-    // handleMoveCarousel('resize')
-    handleMenuType()
     handleRensponsivness()
     clearSizedElements()
   })
@@ -299,14 +225,8 @@ window.onload = () => {
         }
       }, this)
     }
-    handleMenuType('scroll')
     handleMenuHighlight()
   }, 100))
-
-  // handle hash
-  if (window.location.hash) {
-    scrollToId(window.location.hash)
-  }
 
   video.init()
 }
