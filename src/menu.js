@@ -87,6 +87,7 @@ function init() {
   $('.menu-staff').click(() => { handleNavClick('#staff') })
   $('.menu-dove').click(() => { handleNavClick('#dove') })
   $('.menu-contatti').click(() => { handleNavClick('#contatti') })
+  $('.menu-studio').click(() => { window.location = '/studio.html' })
 
   document.getElementById('hamburger-button').onclick = () => {
     handleMenuClick()
