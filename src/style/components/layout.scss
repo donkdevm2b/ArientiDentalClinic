@@ -32,6 +32,11 @@ section {
     padding-bottom: 0rem;
   }
 
+  &.no-margin {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+
   &.bg-img {
     margin-left: 0;
     margin-right: 0;

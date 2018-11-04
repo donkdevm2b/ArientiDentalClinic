@@ -19,7 +19,8 @@ const services = [
   'gnatologia',
   'radiologia-digitale',
   'patologia-orale',
-  'odontoiatria-forense'
+  'odontoiatria-forense',
+  'laboratorio-odontotecnico'
 ]
 
 function handleNavigation(direction) {

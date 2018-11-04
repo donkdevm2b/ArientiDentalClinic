@@ -183,6 +183,7 @@ function handleCarouselColor() {
 
 function initCarousel() {
   $('.owl-carousel.docs-carousel').owlCarousel({
+    dots: false,
     loop: true,
     margin: 30,
     autoplay: true,
