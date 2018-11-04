@@ -88,6 +88,7 @@ function init() {
   $('.menu-dove').click(() => { handleNavClick('#dove') })
   $('.menu-contatti').click(() => { handleNavClick('#contatti') })
   $('.menu-studio').click(() => { window.location = '/studio.html' })
+  $('.menu-agevolazioni').click(() => { window.location = '/agevolazioni.html' })
 
   document.getElementById('hamburger-button').onclick = () => {
     handleMenuClick()

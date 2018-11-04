@@ -13,6 +13,11 @@
 // header
 $header-breakpoint: 920;
 
+.menu-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;  
+}
+
 header {
   z-index: 99999;
   height: 62px;
@@ -56,6 +61,7 @@ header {
     p {
       -webkit-margin-after: 0;
       -webkit-margin-before: 0;
+      flex-grow: 1;    
     }
   }
   p {
