@@ -15,7 +15,11 @@ $header-breakpoint: 920;
 
 .menu-list-wrapper {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+
+  p {
+    font-size: 12px;
+  }
 }
 
 header {
