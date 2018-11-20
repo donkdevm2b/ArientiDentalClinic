@@ -11,7 +11,7 @@ function init() {
       console.log('onYouTubeIframeAPIReady')
       const player = new YT.Player('video1', {
         // videoId: '6So3Jru5Y1w',
-        videoId: '79DzZeRqjlA',
+        videoId: 'i7PniwJqyz0',
         playerVars: {
           controls: 0,
           modestbranding: 1,
@@ -22,7 +22,13 @@ function init() {
           mute: 1,
           fs: 0,
           loop: 1,
-          playlist: '79DzZeRqjlA' }
+          playlist: 'i7PniwJqyz0'
+        },
+        events: {
+          onReady: e => {
+            e.target.setPlaybackRate(0.5)
+          },
+        }
       })
     }
   } else {
