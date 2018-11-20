@@ -11,7 +11,7 @@ function init() {
       console.log('onYouTubeIframeAPIReady')
       const player = new YT.Player('video1', {
         // videoId: '6So3Jru5Y1w',
-        videoId: 'i7PniwJqyz0',
+        videoId: '79DzZeRqjlA',
         playerVars: {
           controls: 0,
           modestbranding: 1,
@@ -22,7 +22,7 @@ function init() {
           mute: 1,
           fs: 0,
           loop: 1,
-          playlist: 'i7PniwJqyz0' }
+          playlist: '79DzZeRqjlA' }
       })
     }
   } else {

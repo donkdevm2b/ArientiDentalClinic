@@ -644,7 +644,7 @@
 
       var icon = {
         url: './asset/icon/icon.png', // url
-        scaledSize: new google.maps.Size(40, 40) // scaled size
+        scaledSize: new google.maps.Size(40, 50) // scaled size
         // origin: new google.maps.Point(0, 0), // origin
         // anchor: new google.maps.Point(0, 0) // anchor
       }
@@ -663,9 +663,9 @@
       }
 
       // info window
-      var infowindow = new google.maps.InfoWindow({
-        content: '<div id="content" style="width: 300px; heigth: 50px;"><p>Arienti Dental Clinic</p></div>'
-      })
+      // var infowindow = new google.maps.InfoWindow({
+      //   content: '<div id="content" style="width: 300px; heigth: 50px;"><p>Arienti Dental Clinic</p></div>'
+      // })
 
       // open google map at click
       google.maps.event.addListener(marker, 'click', function () {
