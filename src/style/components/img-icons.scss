@@ -4,11 +4,21 @@
 }
 
 .inner-logo {
-  margin-left: 0.6rem;
+  margin-left: 0.7rem;
   width: 19px;
 
   &.small {
     width: 12px;
+  }
+}
+
+.text-container.text-center > h3 .inner-logo {
+  width: auto;
+  max-height: 3rem;
+  vertical-align: middle;
+
+  @media only screen and (max-width: $my-small-break-point) {
+        max-height: 2rem;
   }
 }
 
@@ -50,6 +60,16 @@
     }
   }
 }
+
+// medium and small
+@media only screen and (max-width: $my-small-break-point) {
+.text-container.text-center {
+    h3 .inner-logo {
+      max-height: 2rem;
+    }
+  }
+}
+
 // large
 @media only screen and (min-width: $my-medium-break-point) {
   .img-box {
