@@ -174,8 +174,8 @@ section#cards{
   width: 100vw;
 
   img {
-    padding-bottom: 2rem;
-    width: 100px;    
+    padding-bottom: 5rem;
+    width: 40vw;    
   }
 
   .video-background {
@@ -249,8 +249,8 @@ section#cards{
 @media only screen and (max-width: $my-small-break-point) {
   .intro-wall {
     img {
-      padding-bottom: 1rem;
-      width: 60px;    
+      padding-bottom: 3rem;
+      width: 75vw;    
     }
     &.iw-text {   
       h1 {
