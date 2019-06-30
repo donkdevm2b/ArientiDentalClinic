@@ -209,12 +209,7 @@ section#cards{
         rgba(0, 0, 0, 0.4), 
         rgba(0, 0, 0, 0.4)
       ), 
-      url("/asset/img/smile.jpg");
-      // url("/asset/img/introwall/marilynMonroeSmiling.jpg");
-      // url("/asset/img/introwall/girlSmiling.jpg");      
-      // url("/asset/img/introwall/manSmiling.jpg");      
-      // url("/asset/img/introwall/happyMan.jpg");      
-      // url("/asset/img/introwall/barackObamaSmiling.jpg");      
+      url("/asset/img/smile.jpg");     
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -238,7 +233,7 @@ section#cards{
       list-style-position: outside;
       list-style-type: none;      
     }
-    h6 {
+    h6, h5 {
       color: white;
       letter-spacing: 1px;
     }
