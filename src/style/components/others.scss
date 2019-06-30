@@ -245,7 +245,7 @@ section#cards{
   .intro-wall {
     img {
       padding-bottom: 3rem;
-      width: 75vw;    
+      width: 70vw;    
     }
     &.iw-text {   
       h1 {
@@ -273,6 +273,12 @@ section#cards{
   }
 }
 
-
-// :nth-of-type(1){...}
-// .wheel:nth-of-type(2){...}
+// medium
+@media only screen and (min-width: $my-small-break-point) and (max-width: $my-medium-break-point) {
+  .intro-wall {
+    img {
+      padding-bottom: 3rem;
+      width: 60vw;    
+    }  
+  }
+}
