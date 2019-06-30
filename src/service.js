@@ -48,6 +48,19 @@ window.onload = () => {
   document.getElementById('nav-right').onclick = () => {
     handleNavigation('next')
   }
+
+  document.onkeydown = (e) => {
+    switch (e.keyCode) {
+    case 37:
+      handleNavigation('prev')
+      break
+    case 39:
+      handleNavigation('next')
+      break
+    default:
+    }
+  }
+
   document.getElementsByTagName('section')[0].style.marginTop = '62px'
   // console.log(section.style)
   // section.style.marginTop = '62px'
