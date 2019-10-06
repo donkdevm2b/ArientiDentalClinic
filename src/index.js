@@ -5,6 +5,8 @@ const { debounce } = require('underscore')
 const video = require('./video.js')
 const menu = require('./menu.js')
 
+import { staff } from './content'
+
 import './style/style.scss'
 import 'owl.carousel'
 import 'owl.carousel/dist/owl.carousel.min.js'
@@ -127,7 +129,28 @@ function handleCarouselColor() {
   }
 }
 
+function addStaff() {
+  staff.forEach(element => {
+    console.log('add staff', element)
+    $('#staffContainer1').append(
+      `<div class= "item">
+      <div class='team-member'>
+        <img src="/asset/img/staff/${element.img}" alt="Chiara Arienti Dentist"/>
+          <div class='team-member-info'>
+            <h3>${element.name.toUpperCase()}</h3>
+            <p>${element.title.toUpperCase()}</p>
+            <p><i>${element.subTitle ? element.subTitle.toUpperCase() : ''}</i></p>
+          </div>
+        </div>
+      </div>`
+    )
+
+  })
+
+}
+
 function initCarousel() {
+  addStaff()
   $('.owl-carousel.docs-carousel').owlCarousel({
     dots: false,
     loop: true,
