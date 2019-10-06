@@ -190,6 +190,22 @@ function initCarousel() {
   })
 }
 
+function submitForm () {
+  const data = {
+    name: $('#form-name')[0].value,
+    email: $('#form-email')[0].value,
+    tel: $('#form-tel')[0].value,
+    message: $('#form-message')[0].value
+  }
+
+  emailjs.send('mailjet', 'template_f7p4PRaz', data)
+    .then(function (response) {
+      console.log('SUCCESS!', response.status, response.text);
+    }, function (error) {
+      console.log('FAILED...', error);
+    });
+}
+
 window.onload = () => {
   $('#menuInjection').load('/html/menu.html', () => { menu.init() })
   $('#footerInjection').load('/html/footer.html')
@@ -204,7 +220,7 @@ window.onload = () => {
   initCarousel()
 
   // handle message
-  $('#message-area').keyup(function() {
+  $('#form-message').keyup(function() {
     const showSend = $(this).val().length > 0
     $('#send-button').css('display', showSend ? 'block' : 'none')
   })
@@ -252,6 +268,12 @@ window.onload = () => {
   }, 100))
 
   video.init()
+
+  // form
+  document.getElementById('send-button').onclick = event => {
+    event.preventDefault()
+    submitForm()
+  }
 }
 
 // function isInViewport (elem) {
