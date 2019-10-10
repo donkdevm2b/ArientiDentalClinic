@@ -16,7 +16,7 @@ module.exports = {
       name: 'Riccardo Pessina',
       title: 'MEDICO ODONTOIATRA',
       subTitle: 'Chirurgia Implantare',
-      img: 'maleDocAvatar.jpg'
+      img: 'pessina.jpg'
     },
     {
       name: 'Francesco Isgró',
@@ -34,7 +34,7 @@ module.exports = {
       name: 'Antonello Cabras',
       title: 'MEDICO ODONTOIATRA',
       subTitle: 'Anatomo Patologo',
-      img: 'maleDocAvatar.jpg'
+      img: 'cabras.jpg'
     },
   ]
 }
