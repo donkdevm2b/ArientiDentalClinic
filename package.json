@@ -8,7 +8,7 @@
     "start": "webpack -p; node app.js",
     "dev": "open http://127.0.0.1:8082; webpack-dev-server --config ./webpack.config.js --mode development",
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
-    "deploy": "func() { git add . && git commit -m \"$1\" && git push && git push heroku; }; func",
+    "deploy": "func() { npm run push \"$1\" && git push heroku; }; func",
     "push": "func() { git add . && git commit -m \"$1\" && git push; }; func"
   },
   "author": "",
