@@ -191,6 +191,9 @@ function initCarousel() {
 }
 
 function submitForm () {
+  document.getElementById('send-button').innerHTML = 'INVIO IN CORSO'
+  document.getElementById('send-button').style.backgroundColor = 'cyan'
+
   const data = {
     name: $('#form-name')[0].value,
     email: $('#form-email')[0].value,
@@ -201,7 +204,13 @@ function submitForm () {
   emailjs.send('mailjet', 'template_f7p4PRaz', data)
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
+      document.getElementById('send-button').innerHTML = 'MESSAGGIO INVIATO'
+      document.getElementById('send-button').style.backgroundColor = 'green'
+      $('#contact-form')[0].reset()
     }, function (error) {
+        document.getElementById('send-button').innerHTML = 'ERRORE RIPROVA PIÙ TARDI'
+        document.getElementById('send-button').style.backgroundColor = 'tomato'
+
       console.log('FAILED...', error);
     });
 }
