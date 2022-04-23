@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -p; node app.js",
     "build": "webpack -p",
-    "dev": "open http://127.0.0.1:8082; webpack-dev-server --config ./webpack.config.js --mode development",
+    "dev": "open http://localhost:8082; webpack-dev-server --config ./webpack.config.js --mode development",
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "deploy": "func() { npm run push \"$1\" && git push heroku; }; func",
     "git:push": "func() { git add . && git commit -m \"$1\" && git push; }; func"
