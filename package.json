@@ -1,7 +1,7 @@
 {
-  "name": "arienti-denta-clinic",
+  "name": "ortodontica-dental-medical-center",
   "version": "1.0.0",
-  "description": "ArientiDentalClinic Website",
+  "description": "ortodontica-dental-medical-center website",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
