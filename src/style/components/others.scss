@@ -31,10 +31,6 @@ hr {
   // height: 522px;
 }
 
-.contacts-container {
-  height: 500px;
-}
-
 .form-container {
   padding-left: 5vw;
   padding-right: 5vw;
@@ -51,11 +47,6 @@ hr {
 }
 
 @media only screen and (max-width: $my-medium-break-point) {
-  .contacts-container {
-    height: 500px;
-    padding-top: 1.25rem;  
-  }
-
   #dove {
     height: 400px;
     padding-bottom: 1rem;
