@@ -606,15 +606,6 @@
           ]
         }
       ]
-      // var style = [
-      //   {
-      //     featureType: "all",
-      //     elementType: "all",
-      //     stylers: [
-      //       { saturation: -100 } // <-- THIS
-      //     ]
-      //   }
-      // ]
 
       var map;
       var bounds = new google.maps.LatLngBounds();
@@ -655,12 +646,6 @@
           url: 'https://www.google.com/maps/place/Dott.+Ssa+Chiara+Arienti+-+Studio+Dentistico/@45.6604,8.7976013,17z/data=!3m1!4b1!4m5!3m4!1s0x478689c1dbe8607b:0x2cb14ed937238c53!8m2!3d45.6604!4d8.79979?hl=it'
         })
       }
-
-      // info window
-      // var infowindow = new google.maps.InfoWindow({
-      //   content: '<div id="content" style="width: 300px; heigth: 50px;"><p>ORTODONTICA Dental Medical Center</p></div>'
-      // })
-
       // open google map at click
       google.maps.event.addListener(marker, 'click', function () {
         window.open(this.url, '_blank').focus();
@@ -670,8 +655,6 @@
       var mapType = new google.maps.StyledMapType(style, { name: "Grayscale" });
       map.mapTypes.set('tehgrayz', mapType);
       map.setMapTypeId('tehgrayz');
-
-      infowindow.open(map, marker)
     }
   </script>
   <!-- <script src="/js/jquery-3.3.1.min.js"></script>     -->
