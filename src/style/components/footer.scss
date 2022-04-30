@@ -3,13 +3,19 @@
 }
 
 @media only screen and (min-width: $my-medium-break-point) {
-    .footer-logo {
-        max-width: 50%;
+    .footer-cell {
+        padding: 0em 5em;
+    }
+  }
+
+  @media only screen and (min-width: $my-small-break-point) {
+    .footer-cell {
+        padding: 2em 2em;
     }
   }
 
   @media only screen and (max-width: $my-small-break-point) {
-    .footer-logo {
-        max-width: 75%;
+    .footer-cell {
+        padding: 1.5em 0em;
     }
   }
