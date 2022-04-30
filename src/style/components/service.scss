@@ -58,6 +58,11 @@
   .service-small-box {
     height: 300px;
   }
+
+  .services-container {
+    display: flex;
+    align-items: stretch;
+  }
 }
 
 // original animation
