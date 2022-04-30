@@ -35,7 +35,7 @@ function calcBoundaries(elem) {
   boundaries.top = elementTop
   elem.boundaries = boundaries
   sizedElements.push(elem)
-  console.log('calcBoundaries', sizedElements.length)
+  // console.log('calcBoundaries', sizedElements.length)
 }
 
 function isInViewport(elem) {
@@ -45,8 +45,8 @@ function isInViewport(elem) {
 
   const viewportTop = $(window).scrollTop()
   const viewportBottom = viewportTop + $(window).height()
-  console.log(elem.boundaries)
-  console.log(viewportTop, viewportBottom)
+  // console.log(elem.boundaries)
+  // console.log(viewportTop, viewportBottom)
   return elem.boundaries.bottom > viewportTop + 200 && elem.boundaries.top < viewportBottom
 }
 
@@ -55,7 +55,7 @@ function handleMenuHighlight() {
   menuList.some(elName => {
     const element = document.getElementById(elName)
     if (isInViewport(element)) {
-      console.log('IN VIEW: ', elName)
+      // console.log('IN VIEW: ', elName)
       // add hovered class
       $(`.menu-${elName}`).addClass('hovered')
 
@@ -131,7 +131,7 @@ function handleCarouselColor() {
 
 function addStaff() {
   staff.forEach(element => {
-    console.log('add staff', element)
+    // console.log('add staff', element)
     $('#staffContainer1').append(
       `<div class= "item">
       <div class='team-member'>
@@ -203,7 +203,7 @@ function submitForm () {
 
   emailjs.send('mailjet', 'template_f7p4PRaz', data)
     .then(function (response) {
-      console.log('SUCCESS!', response.status, response.text);
+      // console.log('SUCCESS!', response.status, response.text);
       document.getElementById('send-button').innerHTML = 'MESSAGGIO INVIATO'
       document.getElementById('send-button').style.backgroundColor = 'green'
       $('#contact-form')[0].reset()
@@ -211,7 +211,7 @@ function submitForm () {
         document.getElementById('send-button').innerHTML = 'ERRORE RIPROVA PIÙ TARDI'
         document.getElementById('send-button').style.backgroundColor = 'tomato'
 
-      console.log('FAILED...', error);
+      // console.log('FAILED...', error);
     });
 }
 
@@ -238,10 +238,10 @@ window.onload = () => {
   $('.button-panel').click(e => {
     const id = e.target.id.slice(-1)
     const otherButtonId = `#button-panel${id === '1' ? '2' : '1'}`
-    console.log('button panel was clicked', id)
-    console.log('otherButtonId', otherButtonId)
+    // console.log('button panel was clicked', id)
+    // console.log('otherButtonId', otherButtonId)
     if (!$(e.target).hasClass('hovered')) {
-      console.log('is not hovered')
+      // console.log('is not hovered')
       $(e.target).toggleClass('hovered')
       $(otherButtonId).toggleClass('hovered')
       $('#panel1, #panel2').toggleClass('zero-opacity')
@@ -263,8 +263,8 @@ window.onload = () => {
   const counterNumbersEl = document.querySelectorAll('.counterNumber')
 
   window.addEventListener('scroll', debounce(() => {
-    console.log('debounced scroll')
-    console.log($(window).scrollTop())
+    // console.log('debounced scroll')
+    // console.log($(window).scrollTop())
     // handle counters
     if (!counterAnimationWasExecuted()) {
       counterNumbersEl.forEach((element, index) => {

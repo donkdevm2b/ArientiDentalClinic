@@ -15,7 +15,7 @@ function handleMenuScrollEffect(trigger) {
   if (trigger) {
     // trigger effect ON
     if (trigger !== setMenuScrollEffect) {
-      console.log('123 set Effect: ON')
+      // console.log('123 set Effect: ON')
       setMenuScrollEffect = true
       $('header').addClass('effectON')
       $('#logo-container').children('img')
@@ -73,7 +73,7 @@ function handleMenuType(action) {
   }
 
   // handle menu effect according to scroll
-  console.log('xxx', $(window).scrollTop())
+  // console.log('xxx', $(window).scrollTop())
   if (setMenuType === 'desktop-menu') {
     handleMenuScrollEffect($(window).scrollTop() === 0)
   }
