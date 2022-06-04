@@ -20,6 +20,7 @@ const services = [
   'radiologia-digitale',
   'patologia-orale',
   'odontoiatria-forense',
+  'impronta-digitale',
   'laboratorio-odontotecnico'
 ]
 
