@@ -19,8 +19,8 @@ const services = [
   'gnatologia',
   'radiologia-digitale',
   'patologia-orale',
-  'odontoiatria-forense',
   'impronta-digitale',
+  'odontoiatria-forense',
   'laboratorio-odontotecnico'
 ]
 
