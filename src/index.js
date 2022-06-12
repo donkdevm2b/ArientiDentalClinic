@@ -4,6 +4,7 @@
 const { debounce } = require('underscore')
 const video = require('./video.js')
 const menu = require('./menu.js')
+require('./counter.js')
 
 import { staff } from './content'
 
