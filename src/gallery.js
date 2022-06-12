@@ -35,13 +35,13 @@ function init () {
   counterElements.forEach(element => {
     $('#counter').append(`
     <div class="my-small-12 my-medium-6 my-large-3">
-    <div class='my-small-12'>
-      <h1 class='counterNumber' style='visibility: hidden'>${element.value}</h1>
+      <div class='my-small-12'>
+        <h1 class='counterNumber' style='visibility: hidden'>${element.value}</h1>
+      </div>
+      <div class='my-small-12'>
+        <h4>${element.text}</h4>
+      </div>
     </div>
-    <div class='my-small-12'>
-      <h4>${element.text}</h4>
-    </div>
-  </div>
     `)
   })
 

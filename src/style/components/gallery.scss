@@ -6,3 +6,30 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+#gallery-section {
+    position: relative;
+  }
+  #counter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+//   #gallery {
+//       width: 100%;
+//       height: 100%;
+//   }
+//   #navi,
+//   #infoi {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
+//   #infoi {
+//     z-index: 10;
+//   }

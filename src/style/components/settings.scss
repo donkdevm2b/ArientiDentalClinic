@@ -46,12 +46,13 @@ $test-borderB: 2px solid blue;
 
 $header-height: 62px;
 
-.test1 * {
+// .test1 * {
+.test1 {
   border: $test-borderR;
   // background-color: red;
   // opacity: 0.2;
 }
-.test2 * {
+.test2 {
   border: $test-borderG;
   // background-color: red;
   // opacity: 0.2;
