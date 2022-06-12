@@ -4,7 +4,7 @@
 const { debounce } = require('underscore')
 const video = require('./video.js')
 const menu = require('./menu.js')
-require('./counter.js')
+const gallery = require('./gallery.js')
 
 import { staff } from './content'
 
@@ -189,6 +189,26 @@ function initCarousel() {
       }
     }
   })
+
+  $('.owl-carousel.gallery-carousel').owlCarousel({
+    dots: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 500,
+    responsive: {
+      0: {
+        items: 1
+      },
+      640: {
+        items: 1
+      },
+      1024: {
+        items: 1
+      }
+    }
+  
+  })
 }
 
 function submitForm () {
@@ -217,6 +237,8 @@ function submitForm () {
 }
 
 window.onload = () => {
+  gallery.init()
+
   $('#menuInjection').load('/html/menu.html', () => { menu.init() })
   $('#footerInjection').load('/html/footer.html')
 
