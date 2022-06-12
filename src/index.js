@@ -195,15 +195,9 @@ function initCarousel() {
     loop: true,
     autoplay: true,
     autoplayTimeout: 3000,
-    autoplaySpeed: 500,
+    autoplaySpeed: 1000,
     responsive: {
       0: {
-        items: 1
-      },
-      640: {
-        items: 1
-      },
-      1024: {
         items: 1
       }
     }
