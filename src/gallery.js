@@ -33,7 +33,7 @@ function init () {
 
 
   counterElements.forEach(element => {
-    $('#counter').append(`
+    $('#counter-inner').append(`
     <div class="my-small-12 my-medium-6 my-large-3">
       <div class='my-small-12'>
         <h1 class='counterNumber' style='visibility: hidden'>${element.value}</h1>
