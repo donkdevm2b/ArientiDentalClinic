@@ -191,7 +191,7 @@ function initCarousel() {
   })
 
   $('.owl-carousel.gallery-carousel').owlCarousel({
-    dots: true,
+    dots: false,
     loop: true,
     autoplay: true,
     autoplayTimeout: 3000,
