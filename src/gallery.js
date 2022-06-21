@@ -27,7 +27,7 @@ function init () {
     <a
     class='button'
     href="/digitalizzazione-studio.html">
-    VISITA LO STUDIO
+    SCOPRI IL NOSTRO STUDIO
   </a>
     `
   )
