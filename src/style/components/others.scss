@@ -148,10 +148,10 @@ section#cards{
   letter-spacing: 1px;
   -webkit-box-shadow: 0 0 2px 1px #f6f6f6;
   box-shadow: 0 0 2px 1px #f6f6f6;
+  font-weight: bold;
+  
   &:hover {
-    font-weight: bold;
     cursor: pointer;
-    // background-color: $my-medium-grey;
     background-color: $fourth-color;
   }
 }
