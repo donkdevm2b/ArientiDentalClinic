@@ -135,6 +135,7 @@ section#cards{
 }
 
 .button {
+  pointer-events: auto;
   border-radius: 10px;
   text-decoration: none;
   padding: 1.5rem 2rem;
