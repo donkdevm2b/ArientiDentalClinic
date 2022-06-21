@@ -52,6 +52,10 @@ section {
     }
   }
 
+  &.visible-section {
+    overflow-y: visible;
+  }
+
   &#carousel-section {
     padding: 50px 0px /*70px*/ 0px 0px;
     overflow-y: visible;

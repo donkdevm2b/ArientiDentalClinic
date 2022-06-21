@@ -11,8 +11,18 @@
     position: relative;
 }
 
+#go-to-studio-button-mobile-container {
+    text-align: center;
+}
+
 @media only screen and (max-width: $my-small-break-point) {
     #go-to-studio-button-desktop-container {
         display: none;
     }
 }
+@media only screen and (min-width: $my-small-break-point) {
+    #go-to-studio-button-mobile-container {
+        display: none;
+    }
+}
+
