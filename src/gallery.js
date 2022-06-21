@@ -22,6 +22,15 @@ const counterElements = [
 
 function init () {
 
+  $('.goToStudioButtonInjection').append(
+    `
+    <a
+    class='button'
+    href="/digitalizzazione-studio.html">
+    VISITA LO STUDIO
+  </a>
+    `
+  )
   for (let index = 1; index <= galleryImgNumber; index++) {
     $('#gallery').append(
       `
