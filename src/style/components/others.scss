@@ -143,13 +143,13 @@ section#cards{
   color: white;
   font-family: Montserrat;
   font-size: 12px;
-  font-weight: 400;
   transition: 0.2s linear;
   letter-spacing: 1px;
   &:hover {
-    font-weight: 400;
+    font-weight: bold;
     cursor: pointer;
-    background-color: $my-medium-grey;
+    // background-color: $my-medium-grey;
+    background-color: $fourth-color;
   }
 }
 
