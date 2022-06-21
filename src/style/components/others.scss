@@ -145,6 +145,8 @@ section#cards{
   font-size: 12px;
   transition: 0.2s linear;
   letter-spacing: 1px;
+  -webkit-box-shadow: 0 0 2px 1px #f6f6f6;
+  box-shadow: 0 0 2px 1px #f6f6f6;
   &:hover {
     font-weight: bold;
     cursor: pointer;
