@@ -267,6 +267,12 @@ section#cards{
   }
 }
 
+.studio-navigation {
+  overflow-y: clip;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
 // medium
 @media only screen and (min-width: $my-small-break-point) and (max-width: $my-medium-break-point) {
   .intro-wall {
