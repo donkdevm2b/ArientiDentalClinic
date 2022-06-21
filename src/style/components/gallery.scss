@@ -25,4 +25,13 @@
         display: none;
     }
 }
+@media only screen and (max-width: $my-xsmall-break-point) {
+    #go-to-studio-button-mobile-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        a {
+            display: block;
+        }
+    }
+}
 
