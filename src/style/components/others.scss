@@ -282,3 +282,9 @@ section#cards{
     }  
   }
 }
+
+@media only screen and (max-width: $my-xsmall-break-point) {
+  .button {
+      display: block;
+  }
+}
