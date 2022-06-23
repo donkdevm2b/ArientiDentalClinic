@@ -3,6 +3,11 @@ function deviceIsMobile () {
   return !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 }
 
+function shouldDisplayVideo (trigger) {
+  document.getElementsByClassName('video-background')[0].style.visibility = trigger ? 'block' : 'hidden'
+
+}
+
 function init() {
   if (deviceIsMobile()) {
     const tag = document.createElement('script')
@@ -33,7 +38,7 @@ function init() {
       })
     }
   } else {
-    document.getElementsByClassName('video-background')[0].style.visibility = 'hidden'
+    shouldDisplayVideo(false)
   }
 }
 
