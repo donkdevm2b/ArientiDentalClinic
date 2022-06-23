@@ -284,6 +284,10 @@ section#cards{
 }
 
 @media only screen and (max-width: $my-xsmall-break-point) {
+  .mobile-button-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
   .button {
       display: block;
   }
