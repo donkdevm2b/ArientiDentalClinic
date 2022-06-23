@@ -46,7 +46,7 @@ $test-borderB: 2px solid blue;
 
 $header-height: 62px;
 
-// .test1 * {
+
 .test1 {
   border: $test-borderR;
   // background-color: red;
@@ -59,6 +59,10 @@ $header-height: 62px;
 }
 .test3 {
   border: $test-borderB
+}
+
+.test-all * {
+  border: $test-borderR;
 }
 
 // font
