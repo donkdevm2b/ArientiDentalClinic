@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'chiara arienti',
       title: 'medico odontoiatra',
-      subTitle: 'chirurgia, ortodonzia, pedodonzia, protesi',
+      subTitle: 'ortodonzia, pedodonzia, protesi',
       img: 'chiara_arienti.jpeg'
     },
     {
