@@ -134,16 +134,18 @@ function addStaff() {
   staff.forEach(element => {
     // console.log('add staff', element)
     $('#staffContainer1').append(
-      `<div class= "item">
-      <div class='team-member'>
-        <img src="/asset/img/staff/${element.img}" alt="Chiara Arienti Dentist"/>
-          <div class='team-member-info'>
-            <h3>${element.name.toUpperCase()}</h3>
-            <p>${element.title.toUpperCase()}</p>
-            <div style="display: inline-block"><p><i>${element.subTitle ? element.subTitle.toUpperCase() : ' '}</i></p></div>
-          </div>
+      `
+      <div class='item team-member'>
+        <div class="team-member-image-container">
+          <img src="/asset/img/staff/${element.img}" alt="Chiara Arienti Dentist"/>
         </div>
-      </div>`
+        <div class='team-member-info'>
+          <h3>${element.name.toUpperCase()}</h3>
+          <p>${element.title.toUpperCase()}</p>
+          <div style="display: inline-block"><p><i>${element.subTitle ? element.subTitle.toUpperCase() : '&nbsp'}</i></p></div>
+        </div>
+      </div>
+      `
     )
 
   })
@@ -156,7 +158,7 @@ function initCarousel() {
     dots: false,
     loop: true,
     margin: 30,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     autoplaySpeed: 500,
     responsive: {
