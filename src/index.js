@@ -139,8 +139,14 @@ function addStaff() {
         </div>
         <div class='team-member-info'>
           <h3>${element.name.toUpperCase()}</h3>
-          <p>${element.title.toUpperCase()}</p>
-          <div style="display: inline-block"><p><i>${element.subTitle ? element.subTitle.toUpperCase() : '&nbsp'}</i></p></div>
+          <p>${element.title ? element.title.toUpperCase() : '&nbsp' }</p>
+          <div class='staff-subtitle-container'>
+            <p>
+              <i>
+              ${element.subTitle ? element.subTitle.toUpperCase() : '&nbsp'}
+              </i>
+            </p>
+          </div>
         </div>
       </div>
       `
