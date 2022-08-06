@@ -1,7 +1,7 @@
 module.exports = {
   staff: [
     {
-      name: 'dott.sa chiara arienti',
+      name: 'dott.ssa chiara arienti',
       title: '',
       subTitle: 'ortodonzia, pedodonzia, protesi',
       img: 'chiara_arienti.jpeg'
@@ -19,7 +19,7 @@ module.exports = {
       img: 'francesco_isgrò.jpeg'
     },
     {
-      name: 'dott.sa francesca guadagno',
+      name: 'dott.ssa francesca guadagno',
       title: '',
       subTitle: 'ortodonzia',
       img: 'francesca_guadagno.jpeg'
@@ -54,12 +54,12 @@ module.exports = {
       img: 'vanni_armiento.jpeg'
     },
     {
-      name: 'patrizia trevisiol',
+      name: 'sig.ra patrizia trevisiol',
       subTitle: 'manager di segreteria',
       img: 'patrizia_trevisiol.jpeg'
     },
     {
-      name: 'claudia marinelli',
+      name: 'sig.ra claudia marinelli',
       subTitle: 'aso',
       img: 'claudia_marinelli.jpeg'
     }
