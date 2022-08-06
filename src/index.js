@@ -132,12 +132,10 @@ function handleCarouselColor() {
 
 function addStaff() {
   staff.forEach(element => {
-    // console.log('add staff', element)
     $('#staffContainer1').append(
       `
       <div class='item team-member'>
-        <div class="team-member-image-container">
-          <img src="/asset/img/staff/${element.img}" alt="Chiara Arienti Dentist"/>
+        <div class="team-member-image-container" style="background-image: url(/asset/img/staff/${element.img});">
         </div>
         <div class='team-member-info'>
           <h3>${element.name.toUpperCase()}</h3>
