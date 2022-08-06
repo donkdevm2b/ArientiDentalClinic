@@ -34,7 +34,7 @@ module.exports = {
       name: 'dott. antonello cabras',
       title: '',
       subTitle: 'anatomia patologica',
-      img: 'antonello_cabras.jpg'
+      img: 'antonello_cabras.jpeg'
     },
     {
       name: 'dott. massimiliano fenino',
