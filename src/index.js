@@ -162,7 +162,7 @@ function initCarousel() {
     dots: false,
     loop: true,
     margin: 30,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
     autoplaySpeed: 500,
     responsive: {
