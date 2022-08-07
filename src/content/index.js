@@ -9,7 +9,7 @@ module.exports = {
     {
       name: 'dott./avv. leonardo rizzo',
       title: '',
-      subTitle: 'medicina legale, chirurgia, amministrazione',
+      subTitle: 'medicina legale, chirurgia, amministratore',
       img: 'leonardo_rizzo.jpeg'
     },
     {
