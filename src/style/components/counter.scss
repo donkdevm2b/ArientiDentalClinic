@@ -1,4 +1,3 @@
-
 #counter-outer {
   pointer-events: none;
   text-align: center;
@@ -14,15 +13,15 @@
 
 
 #counter-inner {
-  text-shadow: 
-  2px 0 4px #f6f6f6, 
-  -2px 0 4px #f6f6f6, 
-  0 2px 4px #f6f6f6,
-  0 -2px 4px #f6f6f6, 
-  2px 2px 4px #f6f6f6, 
-  -2px -2px 4px #f6f6f6, 
-  2px -2px 4px #f6f6f6, 
-  -2px 2px 4px #f6f6f6;
+  text-shadow:
+    2px 0 4px #f6f6f6,
+    -2px 0 4px #f6f6f6,
+    0 2px 4px #f6f6f6,
+    0 -2px 4px #f6f6f6,
+    2px 2px 4px #f6f6f6,
+    -2px -2px 4px #f6f6f6,
+    2px -2px 4px #f6f6f6,
+    -2px 2px 4px #f6f6f6;
 
   h4 {
     color: #1774d2 !important;
@@ -31,7 +30,7 @@
     letter-spacing: 3px;
     padding-bottom: 2rem;
   }
-  
+
   h1 {
     color: #1774d2 !important;
     font-family: Montserrat;
@@ -39,5 +38,21 @@
     letter-spacing: 2px;
     font-size: 55px;
     visibility: hidden;
+  }
+
+  @media only screen and (max-width: $my-xsmall-break-point) {
+    h1 {
+      font-size: 45px;
+    }
+
+    h4 {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: $my-xsmall-break-point) {
+  #counter-outer {
+    padding-top: 6rem;
   }
 }
