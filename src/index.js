@@ -139,7 +139,13 @@ function addStaff() {
         </div>
         <div class='team-member-info'>
           <h3>${element.name.toUpperCase()}</h3>
-          <p>${element.title ? element.title.toUpperCase() : '&nbsp' }</p>
+            <div class='staff-subtitle-container'>
+              <p>
+                <i>
+                  ${element.title ? element.title.toUpperCase() : '&nbsp'}
+                </i>
+              </p>
+          </div>
           <div class='staff-subtitle-container'>
             <p>
               <i>
@@ -207,11 +213,11 @@ function initCarousel() {
         items: 1
       }
     }
-  
+
   })
 }
 
-function submitForm () {
+function submitForm() {
   document.getElementById('send-button').innerHTML = 'INVIO IN CORSO'
   document.getElementById('send-button').style.backgroundColor = 'cyan'
 
@@ -229,8 +235,8 @@ function submitForm () {
       document.getElementById('send-button').style.backgroundColor = 'green'
       $('#contact-form')[0].reset()
     }, function (error) {
-        document.getElementById('send-button').innerHTML = 'ERRORE RIPROVA PIÙ TARDI'
-        document.getElementById('send-button').style.backgroundColor = 'tomato'
+      document.getElementById('send-button').innerHTML = 'ERRORE RIPROVA PIÙ TARDI'
+      document.getElementById('send-button').style.backgroundColor = 'tomato'
 
       // console.log('FAILED...', error);
     });
@@ -252,7 +258,7 @@ window.onload = () => {
   initCarousel()
 
   // handle message
-  $('#form-message').keyup(function() {
+  $('#form-message').keyup(function () {
     const showSend = $(this).val().length > 0
     $('#send-button').css('display', showSend ? 'block' : 'none')
   })

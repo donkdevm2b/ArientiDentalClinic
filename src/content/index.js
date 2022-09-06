@@ -2,14 +2,14 @@ module.exports = {
   staff: [
     {
       name: 'dott.ssa chiara arienti',
-      title: '',
+      title: 'direzione sanitaria',
       subTitle: 'ortodonzia, pedodonzia, protesi',
       img: 'chiara_arienti.jpeg'
     },
     {
       name: 'dott./avv. leonardo rizzo',
-      title: '',
-      subTitle: 'medicina legale, chirurgia, amministratore',
+      title: 'amministratore con direzione generale',
+      subTitle: 'medicina legale, chirurgia',
       img: 'leonardo_rizzo.jpeg'
     },
     {
