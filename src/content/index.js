@@ -14,53 +14,53 @@ module.exports = {
     },
     {
       name: 'dott. francesco isgró',
-      title: '',
-      subTitle: 'chirurgia endodontica',
+      subTitle: '',
+      title: 'chirurgia endodontica',
       img: 'francesco_isgrò.jpeg'
     },
     {
       name: 'dott.ssa francesca guadagno',
-      title: '',
-      subTitle: 'ortodonzia',
+      subTitle: '',
+      title: 'ortodonzia',
       img: 'francesca_guadagno.jpeg'
     },
     {
       name: 'dott. riccardo pessina',
-      title: '',
-      subTitle: 'chirurgia implantare',
+      subTitle: '',
+      title: 'chirurgia implantare',
       img: 'riccardo_pessina.jpg'
     },
     {
       name: 'dott. antonello cabras',
-      title: '',
-      subTitle: 'anatomia patologica',
+      subTitle: '',
+      title: 'anatomia patologica',
       img: 'antonello_cabras.jpeg'
     },
     {
       name: 'dott. massimiliano fenino',
-      title: '',
-      subTitle: 'chirurgia avanzata',
+      subTitle: '',
+      title: 'chirurgia avanzata',
       img: 'maleDocAvatar.jpg'
     },
     {
       name: 'dott. paolo monestiroli',
-      title: '',
-      subTitle: 'medicina legale',
+      subTitle: '',
+      title: 'medicina legale',
       img: 'maleDocAvatar.jpg'
     },
     {
       name: 'dott. vanni armiento',
-      subTitle: 'account manager',
+      title: 'account manager',
       img: 'vanni_armiento.jpeg'
     },
     {
       name: 'sig.ra patrizia trevisiol',
-      subTitle: 'manager di segreteria',
+      title: 'manager di segreteria',
       img: 'patrizia_trevisiol.jpeg'
     },
     {
       name: 'sig.ra claudia marinelli',
-      subTitle: 'aso',
+      title: 'aso',
       img: 'claudia_marinelli.jpeg'
     }
   ]
