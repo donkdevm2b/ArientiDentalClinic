@@ -2,11 +2,13 @@
   // overflow: visible;
   // display: flex;
   animation-direction: normal;
-  transition: 0.5s ease; 
-  * {    
-    transition: 0.5s ease; 
+  transition: 0.5s ease;
+
+  * {
+    transition: 0.5s ease;
   }
-  > div {
+
+  >div {
     .service-box {
       display: flex;
       flex-grow: 0;
@@ -17,25 +19,27 @@
       text-align: center;
       padding-left: 0.25rem;
       padding-right: 0.25rem;
+
       h3 {
         font-size: 16px;
         letter-spacing: 6px;
         font-weight: 700;
         color: white;
       }
-  
+
       &:hover {
-        background-color: rgba(33,40,45,0.85) !important;
+        background-color: rgba(33, 40, 45, 0.85) !important;
+
         h3 {
           font-size: 20px;
         }
-      }    
+      }
     }
-  }  
+  }
 }
 
 .owl-carousel.docs-carousel {
-  > div {
+  >div {
 
     .team-member {
       border: $light-border;
@@ -51,7 +55,7 @@
       margin-left: 0;
       margin-right: 0;
       background-size: cover;
-      background-attachment: fixed;
+      // background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -64,14 +68,14 @@
       h3 {
         font-size: 13px;
         letter-spacing: 1px;
-        font-weight: 400;        
+        font-weight: 400;
         color: $dark-text-color;
       }
-  
+
       p {
         font-size: 11px;
         letter-spacing: 2px;
-        font-weight: 500;         
+        font-weight: 500;
         color: $text-color;
       }
     }
@@ -82,22 +86,24 @@
 // owl override
 .owl-carousel a {
   text-decoration: none;
-  &:visited {    
+
+  &:visited {
     text-decoration: none;
   }
 }
+
 .owl-carousel.owl-grab {
   cursor: -webkit-grabbing !important;
 }
 
 @media only screen and (max-width: $my-small-break-point) {
-.owl-carousel.services-carousel {
-  > div {
-    .service-box {
-      h3 {
-        font-size: 20px !important;
-      }  
+  .owl-carousel.services-carousel {
+    >div {
+      .service-box {
+        h3 {
+          font-size: 20px !important;
+        }
+      }
     }
-  }  
-}
+  }
 }
