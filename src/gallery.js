@@ -20,7 +20,7 @@ const counterElements = [
 ]
 
 
-function init () {
+function init() {
 
   $('.goToStudioTechButtonInjection').load('/html/components/goToStudioTechButton.html')
 
