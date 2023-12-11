@@ -8,7 +8,7 @@
     "start": "webpack -p; node app.js",
     "build": "webpack -p",
     "dev": "yarn run pre-dev-print; open http://localhost:8082; webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js --mode development;",
-    "pre-dev-print": "ip=$(ipconfig getifaddr en0); echo \"*************\n\nYou can check the website at this link: http://${ip}:8082\n\n\n*************\n\"", 
+    "pre-dev-print": "ip=$(ipconfig getifaddr en0); echo \"*************\n\nYou can check the website at this link: http://${ip}:8082\n\n\n*************\n\"",
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "deploy": "func() { yarn run git:push \"$1\" && git push heroku; }; func",
     "git:push": "func() { git add . && git commit -m \"$1\" && git push; }; func"
