@@ -42,12 +42,12 @@ module.exports = {
       title: 'chirurgia avanzata',
       img: 'maleDocAvatar.jpg'
     },
-    {
-      name: 'dott. paolo monestiroli',
-      subTitle: '',
-      title: 'medicina legale',
-      img: 'maleDocAvatar.jpg'
-    },
+    /*     {
+          name: 'dott. paolo monestiroli',
+          subTitle: '',
+          title: 'medicina legale',
+          img: 'maleDocAvatar.jpg'
+        }, */
     {
       name: 'dott. vanni armiento',
       title: 'account manager',
