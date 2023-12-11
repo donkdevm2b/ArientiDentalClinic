@@ -20,7 +20,7 @@ const services = [
   'radiologia-digitale',
   'patologia-orale',
   'impronta-digitale',
-  'odontoiatria-forense',
+  'odontoiatria-legale',
   'laboratorio-odontotecnico'
 ]
 
@@ -52,13 +52,13 @@ window.onload = () => {
 
   document.onkeydown = (e) => {
     switch (e.keyCode) {
-    case 37:
-      handleNavigation('prev')
-      break
-    case 39:
-      handleNavigation('next')
-      break
-    default:
+      case 37:
+        handleNavigation('prev')
+        break
+      case 39:
+        handleNavigation('next')
+        break
+      default:
     }
   }
 
