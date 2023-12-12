@@ -1,43 +1,43 @@
 module.exports = {
   staff: [
     {
-      name: 'dott.ssa chiara arienti',
+      name: 'chiara arienti',
       title: 'direzione sanitaria',
       subTitle: 'ortodonzia, pedodonzia, protesi',
       img: 'chiara_arienti.jpeg'
     },
     {
-      name: 'dott./avv. leonardo rizzo',
+      name: 'leonardo rizzo',
       title: 'amministratore con direzione generale',
       // subTitle: 'medicina legale, chirurgia',
       img: 'leonardo_rizzo.jpeg'
     },
     {
-      name: 'dott. francesco isgró',
+      name: 'francesco isgró',
       subTitle: '',
       title: 'chirurgia endodontica',
       img: 'francesco_isgrò.jpeg'
     },
     {
-      name: 'dott.ssa francesca guadagno',
+      name: 'francesca guadagno',
       subTitle: '',
       title: 'ortodonzia',
       img: 'francesca_guadagno.jpeg'
     },
     {
-      name: 'dott. riccardo pessina',
+      name: 'riccardo pessina',
       subTitle: '',
       title: 'chirurgia implantare',
       img: 'riccardo_pessina.jpg'
     },
     {
-      name: 'dott. antonello cabras',
+      name: 'antonello cabras',
       subTitle: '',
       title: 'anatomia patologica',
       img: 'antonello_cabras.jpeg'
     },
     {
-      name: 'dott. massimiliano fenino',
+      name: 'massimiliano fenino',
       subTitle: '',
       title: 'chirurgia avanzata',
       img: 'maleDocAvatar.jpg'
@@ -49,17 +49,17 @@ module.exports = {
           img: 'maleDocAvatar.jpg'
         }, */
     {
-      name: 'dott. vanni armiento',
+      name: 'vanni armiento',
       title: 'account manager',
       img: 'vanni_armiento.jpeg'
     },
     {
-      name: 'sig.ra patrizia trevisiol',
+      name: 'patrizia trevisiol',
       title: 'manager di segreteria',
       img: 'patrizia_trevisiol.jpeg'
     },
     {
-      name: 'sig.ra claudia marinelli',
+      name: 'claudia marinelli',
       title: 'aso',
       img: 'claudia_marinelli.jpeg'
     }
