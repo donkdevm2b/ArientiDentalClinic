@@ -1,67 +1,71 @@
 module.exports = {
   staff: [
     {
-      name: 'chiara arienti',
-      title: 'direzione sanitaria',
-      subTitle: 'ortodonzia, pedodonzia, protesi',
-      img: 'chiara_arienti.jpeg'
-    },
-    {
-      name: 'leonardo rizzo',
-      title: 'amministratore con direzione generale',
+      name: 'Dott. leonardo rizzo',
+      title: 'Chirurgia Orale – Chirurgia Estetica – Implantologia',
       // subTitle: 'medicina legale, chirurgia',
       img: 'leonardo_rizzo.jpeg'
     },
     {
-      name: 'francesco isgró',
-      subTitle: '',
-      title: 'chirurgia endodontica',
+      name: 'Dott.ssa chiara arienti',
+      title: 'Ortodonzia – Pedodonzia – Protesi',
+      // subTitle: 'ortodonzia, pedodonzia, protesi',
+      img: 'chiara_arienti.jpeg'
+    },
+    {
+      name: 'Dott. francesco isgró',
+      title: 'Endodonzia – Chirurgia Endodontica',
+      // subTitle: '',
       img: 'francesco_isgrò.jpeg'
     },
     {
-      name: 'francesca guadagno',
-      subTitle: '',
-      title: 'ortodonzia',
+      name: 'Dott.ssa francesca guadagno',
+      title: 'Ortodonzia - Pedodonzia',
+      // subTitle: '',
       img: 'francesca_guadagno.jpeg'
     },
     {
-      name: 'riccardo pessina',
-      subTitle: '',
-      title: 'chirurgia implantare',
-      img: 'riccardo_pessina.jpg'
-    },
-    {
-      name: 'antonello cabras',
-      subTitle: '',
+      name: 'Dott. antonello cabras',
+      // subTitle: '',
       title: 'anatomia patologica',
       img: 'antonello_cabras.jpeg'
     },
     {
-      name: 'massimiliano fenino',
-      subTitle: '',
-      title: 'chirurgia avanzata',
+      name: 'Dott. massimiliano fenino',
+      // subTitle: '',
+      title: 'chirurgia orale',
       img: 'maleDocAvatar.jpg'
     },
-    /*     {
-          name: 'dott. paolo monestiroli',
-          subTitle: '',
-          title: 'medicina legale',
-          img: 'maleDocAvatar.jpg'
-        }, */
     {
-      name: 'vanni armiento',
+      name: 'Dott. Francesco Feliciotti',
+      // subTitle: '',
+      title: 'Igiene dentale',
+      img: 'francesco_feliciotti.jpeg'
+    },
+    {
+      name: 'Dott. vanni armiento',
       title: 'account manager',
       img: 'vanni_armiento.jpeg'
     },
     {
-      name: 'patrizia trevisiol',
-      title: 'manager di segreteria',
-      img: 'patrizia_trevisiol.jpeg'
+      name: 'Dott.ssa Veronica Leva',
+      title: 'Office manager',
+      img: 'veronica_leva.jpeg'
     },
     {
       name: 'claudia marinelli',
       title: 'aso',
       img: 'claudia_marinelli.jpeg'
-    }
+    },
+    {
+      name: 'karen smith',
+      title: 'aso',
+      img: 'karen_smith.jpeg'
+    },
+    {
+      name: 'chiara cierro',
+      title: 'aso',
+      img: 'chiara_cierro.jpeg'
+    },
   ]
 }
