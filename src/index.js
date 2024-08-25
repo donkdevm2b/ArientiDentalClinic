@@ -163,7 +163,7 @@ function addStaff() {
   doctors.forEach(element => {
     // <img class='item img-box' src="/asset/img/home/${element.img}" alt="${element.alt}"></img>
     console.log(`dd ${JSON.stringify(element)}`)
-    $('#first-doctors-carousel-container').append(
+    $('#doctors-carousel-container').append(
       `
         <div class='item doctors-carousel-member'>
           <div class="doctors-carousel-image-container" style="background-image: url(/asset/img/home/${element.img});"></div>
@@ -229,7 +229,7 @@ function initCarousel() {
   }
 
   $('.owl-carousel.gallery-carousel').owlCarousel(singleImageCarouselConfigOptions)
-  $('.owl-carousel.first-doctors-carousel').owlCarousel(singleImageCarouselConfigOptions)
+  $('.owl-carousel.doctors-carousel').owlCarousel(singleImageCarouselConfigOptions)
 }
 
 function submitForm() {
