@@ -276,7 +276,7 @@ window.onload = () => {
   })
 
   // panel
-  $('.button-panel').click(e => {
+  $('.button-panel').on("click", e => {
     const id = e.target.id.slice(-1)
     const otherButtonId = `#button-panel${id === '1' ? '2' : '1'}`
     // console.log('button panel was clicked', id)
