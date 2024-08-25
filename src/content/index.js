@@ -16,7 +16,7 @@ module.exports = {
       name: 'Dott. francesco isgró',
       title: 'Endodonzia – Chirurgia Endodontica',
       // subTitle: '',
-      img: 'francesco_isgrò.jpeg'
+      img: 'francesco_isgro.jpeg'
     },
     {
       name: 'Dott.ssa francesca guadagno',
