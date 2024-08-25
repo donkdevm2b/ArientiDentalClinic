@@ -213,7 +213,19 @@ function initCarousel() {
         items: 1
       }
     }
+  })
 
+  $('.owl-carousel.first-doctors-carousel').owlCarousel({
+    dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 1000,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
   })
 }
 
