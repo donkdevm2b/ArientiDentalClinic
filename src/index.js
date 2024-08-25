@@ -165,10 +165,7 @@ function addStaff() {
     console.log(`dd ${JSON.stringify(element)}`)
     $('#doctors-carousel-container').append(
       `
-        <div class='item doctors-carousel-member'>
-          <div class="doctors-carousel-image-container" style="background-image: url(/asset/img/home/${element.img});"></div>
-        </div>
-          
+          <div class="item" style="background-image: url(/asset/img/home/${element.img});"></div>
       `
     )
   })

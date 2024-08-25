@@ -39,19 +39,20 @@
 }
 
 .owl-carousel.doctors-carousel {
-  .doctors-carousel-image-container {
-    height: 70vh;
-    overflow: hidden;
-    margin-left: 0;
-    margin-right: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+  border: $test-borderG;
 
-  .doctors-carousel-member {
-    overflow: hidden;
-    width: 100%;
+  .item {
+    border: $test-borderB;
+    height: 100vh;
+    background-position: center center;
+    // overflow: hidden;
+    // overflow: hidden;
+    // margin-left: 0;
+    // margin-right: 0;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+
+    // width: 100%;
   }
 }
 
