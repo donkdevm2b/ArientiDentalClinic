@@ -132,7 +132,7 @@ function handleCarouselColor() {
 
 function addStaff() {
   staff.forEach(element => {
-    $('#staffContainer1').append(
+    $('#staffContainer').append(
       `
       <div class='item staff-member'>
         <div class="staff-member-image-container" style="background-image: url(/asset/img/staff/${element.img});">
