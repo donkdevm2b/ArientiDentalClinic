@@ -161,10 +161,14 @@ function addStaff() {
   })
 
   doctors.forEach(element => {
+    // <img class='item img-box' src="/asset/img/home/${element.img}" alt="${element.alt}"></img>
     console.log(`dd ${JSON.stringify(element)}`)
     $('#first-doctors-carousel-container').append(
       `
-          <img class='item img-box' src="/asset/img/home/${element.img}" alt="${element.alt}">
+        <div class='item doctors-carousel-member'>
+          <div class="doctors-carousel-image-container" style="background-image: url(/asset/img/home/${element.img});"></div>
+        </div>
+          
       `
     )
   })
