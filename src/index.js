@@ -202,7 +202,7 @@ function initCarousel() {
     }
   })
 
-  $('.owl-carousel.first-doctors-carousel').owlCarousel({
+  $('.owl-carousel.gallery-carousel').owlCarousel({
     dots: false,
     loop: true,
     autoplay: true,
@@ -213,6 +213,7 @@ function initCarousel() {
         items: 1
       }
     }
+
   })
 }
 
