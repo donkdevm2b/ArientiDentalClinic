@@ -134,10 +134,10 @@ function addStaff() {
   staff.forEach(element => {
     $('#staffContainer1').append(
       `
-      <div class='item team-member'>
-        <div class="team-member-image-container" style="background-image: url(/asset/img/staff/${element.img});">
+      <div class='item staff-member'>
+        <div class="staff-member-image-container" style="background-image: url(/asset/img/staff/${element.img});">
         </div>
-        <div class='team-member-info'>
+        <div class='staff-member-info'>
           <h3>${element.name.toUpperCase()}</h3>
             <div class='staff-subtitle-container'>
               <p>
