@@ -278,7 +278,7 @@ window.onload = () => {
   // panel
   $('.button-panel').click(e => {
     const id = e.target.id.slice(-1)
-    const otherButtonId = `#button - panel${id === '1' ? '2' : '1'} `
+    const otherButtonId = `#button-panel${id === '1' ? '2' : '1'}`
     // console.log('button panel was clicked', id)
     // console.log('otherButtonId', otherButtonId)
     if (!$(e.target).hasClass('hovered')) {
