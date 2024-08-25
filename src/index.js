@@ -6,7 +6,7 @@ const video = require('./video.js')
 const menu = require('./menu.js')
 const gallery = require('./gallery.js')
 
-import { staff } from './content'
+import { doctors, staff } from './content'
 
 import './style/style.scss'
 import 'owl.carousel'
@@ -160,6 +160,15 @@ function addStaff() {
 
   })
 
+  doctors.forEach(element => {
+    console.log(`dd ${JSON.stringify(element)}`)
+    $('#first-doctors-carousel-container').append(
+      `
+          <img class='item img-box' src="/asset/img/home/${element.img}" alt="${element.alt}">
+      `
+    )
+  })
+
 }
 
 function initCarousel() {
@@ -268,7 +277,7 @@ window.onload = () => {
   // panel
   $('.button-panel').click(e => {
     const id = e.target.id.slice(-1)
-    const otherButtonId = `#button-panel${id === '1' ? '2' : '1'}`
+    const otherButtonId = `#button - panel${id === '1' ? '2' : '1'} `
     // console.log('button panel was clicked', id)
     // console.log('otherButtonId', otherButtonId)
     if (!$(e.target).hasClass('hovered')) {

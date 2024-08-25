@@ -67,5 +67,13 @@ module.exports = {
       title: 'aso',
       img: 'femaleDocAvatar.png'
     },
-  ]
+  ],
+  doctors: [{
+    img: 'DottoressaChiaraArienti.jpg',
+    alt: 'foto dottoressa chiara arienti'
+  },
+  {
+    img: 'Dottor_Leonardo_Rizzo.jpeg',
+    alt: 'foto dottor leonardo rizzo'
+  }]
 }
