@@ -177,7 +177,7 @@ function addStaff() {
 
 function initCarousel() {
   addStaff()
-  $('.owl-carousel.docs-carousel').owlCarousel({
+  $('.owl-carousel.staff-carousel').owlCarousel({
     dots: false,
     loop: true,
     margin: 30,
