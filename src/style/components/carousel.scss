@@ -38,22 +38,24 @@
   }
 }
 
-.doctors-carousel-member {
-  border: $light-border;
-  overflow: hidden;
-  width: 100%;
+.owl-carousel.doctors-carousel {
+  .doctors-carousel-image-container {
+    height: 70vh;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .doctors-carousel-member {
+    overflow: hidden;
+    width: 100%;
+  }
 }
 
-.doctors-carousel-image-container {
-  height: 70vh;
-  overflow: hidden;
-  // max-height: 600px;
-  margin-left: 0;
-  margin-right: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+
 
 .owl-carousel.staff-carousel {
   >div {
