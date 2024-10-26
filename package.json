@@ -11,7 +11,8 @@
     "pre-dev-print": "ip=$(ipconfig getifaddr en0); echo \"*************\n\nYou can check the website at this link: http://${ip}:8082\n\n\n*************\n\"",
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "deploy": "func() { yarn run git:push \"$1\" && git push heroku; }; func",
-    "git:push": "func() { git add . && git commit -m \"$1\" && git push; }; func"
+    "git:push": "func() { git add . && git commit -m \"$1\" && git push; }; func",
+    "heroku:push": "func() { branch=$(git symbolic-ref --short HEAD) && git push heroku \"$branch\":master; }; func"
   },
   "author": "",
   "license": "ISC",
