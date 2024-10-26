@@ -65,7 +65,7 @@ module.exports = {
     {
       name: 'chiara cierro',
       title: 'aso',
-      img: 'femaleDocAvatar.png'
+      img: 'chiara_cierro.jpeg'
     },
   ],
   doctors: [{
