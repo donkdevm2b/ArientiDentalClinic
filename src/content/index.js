@@ -13,10 +13,10 @@ module.exports = {
       img: 'chiara_arienti.jpeg'
     },
     {
-      name: 'Dott. francesco isgró',
-      title: 'Endodonzia – Chirurgia Endodontica',
+      name: 'Dott.ssa cinzia minazzi',
+      title: 'Endodonzia - Ortodonzia',
       // subTitle: '',
-      img: 'francesco_isgro.jpeg'
+      img: 'cinzia_minazzi.jpeg'
     },
     {
       name: 'Dott.ssa francesca guadagno',
